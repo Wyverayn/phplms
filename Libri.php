@@ -60,7 +60,10 @@
                     while ($row = $result->fetch_assoc()) {
                         $filename = $row["filename"];
                         $filepath = $row["filepath"];
-                        echo "<li><a href='download.php?file=" . urlencode($filename) . "'>$filename</a></li>";
+                        echo "<li>
+                            <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+                            <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
+                        </li>";
                     }
                     echo "</ul>";
                 } else {
