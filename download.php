@@ -1,19 +1,10 @@
 <?php
+
+include "libri_dbcon.php";
 if(!empty($_GET["file"])) {
 
     $filename = isset($_GET["file"]) ? $_GET["file"] : null;
     
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "libri_db";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-
     $sql = "SELECT * FROM files_beta WHERE filename = '$filename'";
     $result = $conn->query($sql);
 
