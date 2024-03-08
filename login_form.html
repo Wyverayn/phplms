@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="login_form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="Box">
+            <div>
+                <img src="logo.png" class="logo">
+            </div>
+            <div class="Title">
+                <table>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <h2>LOGIN</h2>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="Form">
+                <form action="authenticate.php" method="post">
+                    <table>
+                        <tr>
+                            <td>Username</td>
+                            <td><input type="text" name="uname"></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td><input type="password" name="pwd"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <input class="btn" type="submit" name="login" value="Login">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
