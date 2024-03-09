@@ -1,4 +1,60 @@
-.container{
-    color: red;
-    size: 120px 80px;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body-home{
+    width: 100%;
+    height: 1220px;
+    background-color : lightblue;
+}
+.black-fill{
+    background: rgba(0, 0, 0, 0);
+    min-height: 100vh;
+} 
+
+#homeNav{
+    background: rgba(225,225,225,0.7) !important;
+}
+
+.welcome-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+    border-radius: 10px;
+}
+.welcome-text img{
+    width: 50px;
+}
+
+.welcome-text h4{
+    color: violet;
+    font-size:  40px;
+}
+
+.welcome-text p{
+    color: violet;
+    background: rgba(225,225,225,0.7) !important;
+    padding: 5px;
+}
+
+#about{
+    min-height: 100vh;
+}
+#about .card-1{
+    min-width: 600px;
+    width: 90%;
+    background: rgba(225,225,225,0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+  .col-md-4 img{
+    margin: 30px ;
+}   
+
+.copyright-text{
+    text-align: center;
 }
