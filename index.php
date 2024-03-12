@@ -84,7 +84,7 @@
                         </tr>
                         <tr>
                             <td colspan="2" align="center">
-                                <input class="btn" type="submit" name="login" value="Login">
+                                <input class="submit" type="submit" name="login" value="Login">
                             </td>
                         </tr>
                     </table>
