@@ -7,12 +7,17 @@
         $mi = $_POST['mi'];
         $lastname = $_POST['last'];        
         $birth = $_POST['birth'];
-        $role = $_POST['role'];
-        $yearsec = $_POST['year_section'];
+        $yearsec = $_POST['Section'];
+        $role = $_POST['User_Level'];
+        $un = $_POST['username'];
+        $pass = $_POST['pass'];
         
 
         $insert = "INSERT INTO users(`idno`, `lastname`, `firstname`, `mi`, `birthdate`, `role`, `year_section`)
         VALUES('$id', '$lastname', '$firstname', '$mi', '$birth', '$role', '$yearsec')";
+
+        $insert = "INSERT INTO accs(`idno`, `username`, `pass`)
+        VALUES('$id', '$un', '$pass')";
         
         $result = $conn->query($insert);
 
