@@ -8,6 +8,8 @@
     <link rel ="Stylesheet" href ="indexstyle.css">
     <link rel = "icon" href = "images/logoL.png">
 </head>
+
+
 <body class = "body-home">
     <div class = "black-fill">
 
@@ -50,6 +52,48 @@
             <h4>Welcome to Libri </h4>
             <p>In PROgrammer ng Pontevedra nga si Von we trust</p>
           </section>
+
+
+
+          <!-- code na diri ni ralph para sa login -->
+
+          <div class="Container">
+        <div class="Box">
+            <div>
+                <img src="logo.png" class="logo">
+            </div>
+            <div class="Title">
+                <table>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <h2>LOGIN</h2>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="Form">
+                <form action="authenticate.php" method="post">
+                    <table>
+                        <tr>
+                            <td>Username</td>
+                            <td><input type="text" name="uname"></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td><input type="password" name="pwd"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <input class="btn" type="submit" name="login" value="Login">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- asta diri -->
 
           <section id = "about" class = "d-flex justify-content-center align-items-center flex-column" >
             <div class="card mb-3 card-1">
