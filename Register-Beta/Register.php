@@ -8,10 +8,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Sign Up</title>
 </head>
 <body>
-    <h2>Register</h2>
+    <h2>Sign Up</h2>
     <form action="SaveFunction.php" method="post">
         <table>
             <tr>
@@ -32,21 +32,27 @@
                 </td>
             </tr>
             <tr>
+                <td><input type="text" placeholder="Username" name="username"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Password" name="pass"></td>
+            </tr>
+            <tr>
                 <td colspan="2"> 
                     <label for="User_Level">Role:</label>
-                    <select name="User_Level" id="User_Level" name="role">
-                        <option>Student</option>
-                        <option>Teacher</option>
+                    <select name="User_Level" id="User_Level">
+                        <option value=Student>Student</option>
+                        <option value=Teacher>Teacher</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
                     <label for="Section">Section:</label>
-                    <select name="Section" id="Section" name="year_section">
+                    <select name="Section" id="Section">
                         <option value="CpE1A">BSCpE-1A</option>
                         <option value="CpE2A">BSCpE-2A</option>
-                        <option value="CpE2A">BSCpE-3A</option>
+                        <option value="CpE3A">BSCpE-3A</option>
                     </select>
                 </td>
             </tr>
@@ -65,6 +71,7 @@
                 <th>Firstname</th>
                 <th>MI</th>
                 <th>Birth Date</th>
+                <th>Role</th>
                 <th>Year & Sec.</th>
             </thead>
             <tbody>
@@ -82,6 +89,7 @@
                     <td><?php echo $row['firstname']  ?></td>
                     <td><?php echo $row['mi']  ?></td>
                     <td><?php echo $row['birthdate']  ?></td>
+                    <td><?php echo $row['role'] ?></td>
                     <td><?php echo $row['year_section']  ?></td>
                 </tr>
                 <?php
