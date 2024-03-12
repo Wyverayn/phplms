@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>ADMIN</title>
-    <link rel="stylesheet" href="adminstyle.css">
+    <title>USER</title>
+    <link rel="stylesheet" href="userstyle.css">
 </head>
 <div class="header">
-    <h2>ADMIN</h2>
+    <h2>USER</h2>
 </div>
 <body>
+  <div class="body">
+         <!-- upperpart sang body ang may information -->
     <div class="info">
         <div><h4 class="text-center"><h2>Information</h2></h4></div>
         <div class="about">
@@ -23,64 +25,162 @@
         </div>
 
     </div>
-        
-   
-    
+
          <div class="main-content"> <h3>Main Content</h3> 
-         <div class="tablefunctions">
-            <input type="text" placeholder="Search...">
-            <a href="#" class="btn btn-primary"><h4>Upload</h4></a>
-            <a href="#" class="btn btn-primary"><h4>Download</h4></a>
-            <a href="#" class="btn btn-primary"><h4>Delete</h4></a>
-         </div>
+         <input type="text" placeholder="Search...">
 
+    <!-- ang table -->
             <h3>BOOKS</h3>
-                        <table class="table">
-                <thead>
-                    <tr>
-                    <th scope="col">Number</th>
-                    <th scope="col">Book Title</th>
-                    <th scope="col">Author</th>
-                    <th scope="col">Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Book1</td>
-                    <td>Clint</td>
-                    <td>May</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td>Book2</td>
-                    <td>Geanne</td>
-                    <td>November</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td>Book3</td>
-                    <td>Von</td>
-                    <td>July</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">4</th>
-                    <td>Book4</td>
-                    <td>Ralph</td>
-                    <td>September</td>
-                    </tr>
-                    <tr>
-                    <tr>
-                    <th scope="row">5</th>
-                    <td>Book5</td>
-                    <td>Vincent</td>
-                    <td>December</td>
-                    </tr>
-                    <tr>
-                </tbody>
-                </table>
-
+            
+            <div class="des-test">
+            <table class="tab-des-test">
+              <tbody>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    Descriptions, aaaaaupload, and download
+                    <button type="button">Download</button>
+                    <button type="button">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
             </div> 
+            <!-- end of table -->
 
             <div class="sidebar"><h3>Sidebar</h3>
              <div class="space"></div>
@@ -100,6 +200,9 @@
                     <a href="#"><h4>Function</h4></a>
                 </div>
         </div>
+
+    </div>
+
 </body>
 
 <footer>
