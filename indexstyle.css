@@ -3,19 +3,28 @@
     padding: 0;
 }
 
-.body-home{
-    width: 100%;
-    height: 1220px;
-    background-color: aliceblue;
+@font-face {
+    font-family: plushfont;
+    src: url(images/plushblack.otf);
 }
+ .body-home{
+    font-family: plushfont;
+    display: flex;
+    flex-direction: column;
+    height: 2000px;
+    background-color: #e8f2fa;
+    margin-left: 128px;
+    margin-right: 128px;
+    border-right: solid grey 1px;
+    border-left: solid grey 1px;
+}  
+
 .black-fill{
     background: rgba(0, 0, 0, 0);
-    min-height: 100vh;
+    min-height: 100vh; 
 } 
 
-.container {
-    background-color : lightblue;
-}
+
 
 #homeNav{
     background: rgba(225,225,225,0.7) !important;
@@ -23,25 +32,33 @@
 
 .welcome-text{
     display: flex;
-    justify-content: center;
+    
     align-items: center;
     flex-direction: column;
     min-height: 80vh;
     border-radius: 10px;
+    padding: 10px;
 }
 .welcome-text img{
-    width: 50px;
+    width: 600px;
+
 }
 
 .welcome-text h4{
-    color: violet;
-    font-size:  40px;
+    color: #11224d;
+    border-bottom: solid grey 1px;
+    font-size: 60px;
+    font-family: plushfont;
+    font-weight: bold;
+    margin-top: 50px;
 }
 
 .welcome-text p{
-    color: violet;
-    background: rgba(225,225,225,0.7) !important;
+    color: #11224d;
     padding: 5px;
+    font-family: plushfont;
+    font-weight: bold;
+    font-size: 40px;
 }
 
 #about{
@@ -49,16 +66,40 @@
 }
 #about .card-1{
     min-width: 600px;
-    width: 90%;
+    width: 50%;
     background: rgba(225,225,225,0.5);
-    padding: 20px;
-    border-radius: 5px;
+    /* padding: 20px; */
+   
 }
 
-  .col-md-4 img{
-    margin: 30px ;
-}   
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.col-md-4 img{
+    margin-left: 50px;
+    margin-top: 50px;
+}
 
 .copyright-text{
     text-align: center;
 }
+.Title {
+    text-align:center;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
