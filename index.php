@@ -58,40 +58,41 @@
           <!-- code na diri ni ralph para sa login -->
 
           <div class="Container">
-        <div class="Box">
-            <div>
+            <div class="Box">
+              <div>
                 <img src="logo.png" class="logo">
-            </div>
-            <div class="Title">
+              </div>
+              <div class="Title">
                 <table>
-                    <tr>
-                        <td colspan="2" align="center">
-                            <h2>LOGIN</h2>
-                        </td>
-                    </tr>
+                  <tr>
+                    <td colspan="2" align="center">
+                      <h2>LOGIN</h2>
+                    </td>
+                  </tr>
                 </table>
-            </div>
-            <div class="Form">
+              </div>
+              <div class="Form">
                 <form action="authenticate.php" method="post">
-                    <table>
-                        <tr>
-                            <td>Username</td>
-                            <td><input type="text" name="uname"></td>
-                        </tr>
-                        <tr>
-                            <td>Password</td>
-                            <td><input type="password" name="pwd"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="center">
-                                <input class="submit" type="submit" name="login" value="Login">
-                            </td>
-                        </tr>
-                    </table>
+                  <table>
+                    <tr>
+                      <td>Username</td>
+                      <td><input type="text" name="uname"></td>
+                    </tr>
+                    <tr>
+                      <td>Password</td>
+                      <td><input type="password" name="pwd"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" align="center">
+                        <input class="submit" type="submit" name="login" value="Login">
+                        <a href="Register.php">Don't have an account? Click here</a> <!--Temporary redirect link-->
+                      </td>
+                    </tr>
+                  </table>
                 </form>
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
 
     <!-- asta diri -->
 
