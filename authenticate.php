@@ -7,25 +7,23 @@ if($_REQUEST["REQUEST_METHOD"] == "POST") {
 
 
         // <!-- tables and column names to be modified -->
-        $login = "SELECT * FROM users WHERE un = '$username'";
+        $login = "SELECT * FROM users WHERE username = '$username'";
         $result = $conn->query($login);
 
         if($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            if($row['pw'] == $password) {
+            if($row['password'] == $password) {
                 session_start();
 
-                $_SESSION['username'] = $row['un'];
-                $_SESSION['password'] = $row['pwd'];
-                $_SESSION['fullname'] = $row['fullname'];
-                $_SESSION['user_level'] = $row['level'];
+                $_SESSION['username'] = $row['username'];
+                $_SESSION['password'] = $row['password'];
                 $_SESSION['login'] = true;
 
-                if($row['type']='admin') {
-                    header('location: admin.php');
+                if($row['user-type']='admin') {
+                    header('location: Webpages/Admins-page.php');
                 }
                 else {
-                    header('location: user.php');
+                    header('location: Webpages/Students-page.php');
                 }
             }
             else {
