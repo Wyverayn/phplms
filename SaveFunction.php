@@ -13,13 +13,15 @@
         $pass = $_POST['pass'];
         
 
-        $insert = "INSERT INTO users(`idno`, `lastname`, `firstname`, `mi`, `birthdate`, `role`, `year_section`)
+        $insert_users = "INSERT INTO users(`idno`, `lastname`, `firstname`, `mi`, `birthdate`, `role`, `year_section`)
         VALUES('$id', '$lastname', '$firstname', '$mi', '$birth', '$role', '$yearsec')";
 
-        $insert = "INSERT INTO accs(`idno`, `username`, `pass`)
+        $result = $conn->query($insert_users);
+
+        $insert_accs = "INSERT INTO accs(`idno`, `username`, `pass`)
         VALUES('$id', '$un', '$pass')";
         
-        $result = $conn->query($insert);
+        $result = $conn->query($insert_accs);
 
         if($result == TRUE){
             $message = "Student was Successfully Saved.";
