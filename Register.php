@@ -80,7 +80,7 @@
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM users ORDER BY lastname";
+                $sql = "SELECT * FROM accounts ORDER BY lastname";
                 $result = $conn->query($sql);
 
                 if($result->num_rows > 0){
@@ -93,7 +93,7 @@
                     <td><?php echo $row['firstname']  ?></td>
                     <td><?php echo $row['mi']  ?></td>
                     <td><?php echo $row['birthdate']  ?></td>
-                    <td><?php echo $row['role'] ?></td>
+                    <td><?php echo $row['user_role'] ?></td>
                     <td><?php echo $row['year_section']  ?></td>
                 </tr>
                 <?php
@@ -104,6 +104,8 @@
         </table>
 
         <!-- through here -->
+
+        <a href="index.php">Back</a> <!--temporary back button--> 
 
 
 

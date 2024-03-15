@@ -13,13 +13,13 @@
         $pass = $_POST['pass'];
         
 
-        $insert_users = "INSERT INTO users(`idno`, `lastname`, `firstname`, `mi`, `birthdate`, `role`, `year_section`)
+        $insert_users = "INSERT INTO accounts(`idno`, `lastname`, `firstname`, `mi`, `birthdate`, `user_role`, `year_section`)
         VALUES('$id', '$lastname', '$firstname', '$mi', '$birth', '$role', '$yearsec')";
 
         $result = $conn->query($insert_users);
 
-        $insert_accs = "INSERT INTO accs(`idno`, `username`, `pass`)
-        VALUES('$id', '$un', '$pass')";
+        $insert_accs = "INSERT INTO users(`idno`, `username`, `password`, `user_role`)
+        VALUES('$id', '$un', '$pass', '$role')";
         
         $result = $conn->query($insert_accs);
 
