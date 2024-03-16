@@ -13,7 +13,7 @@
         $pass = $_POST['pass'];
         
 
-        $insert_users = "INSERT INTO accounts(`idno`, `lastname`, `firstname`, `mi`, `birthdate`, `user_role`, `year_section`)
+        $insert_users = "INSERT INTO accs(`idno`, `lastname`, `firstname`, `mi`, `birthdate`, `role`, `year_section`)
         VALUES('$id', '$lastname', '$firstname', '$mi', '$birth', '$role', '$yearsec')";
 
         $result = $conn->query($insert_users);

@@ -1,3 +1,6 @@
+<?php 
+    include "libri_dbcon.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +75,7 @@
         </div>
       </div>
       <a href="Register.php">Don't have an account? Click here</a><br><br>
-      <button type="submit" class="btn btn-primary" name="login" value="Login">Login</button>
+      <input type="submit" class="btn btn-primary" name="login" value="Login">
       
     </form>
   </div>
