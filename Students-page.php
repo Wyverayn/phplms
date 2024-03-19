@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="userstyle.css">
 </head>
 <div class="header">
-    <h2>USER</h2>
+    <h2 class="btn">USER</h2>
 </div>
 <body>
+  <div class="upperbody">
+    <h1 class ="anim">LIBRI</h1>
+    <h2>WELCOME</h2>
+  </div>
+  <div class="body">
+         <!-- upperpart sang body ang may information -->
     <div class="info">
         <div><h4 class="text-center"><h2>Information</h2></h4></div>
         <div class="about">
@@ -23,117 +29,14 @@
         </div>
 
     </div>
-        
-   
-    
-    <div class="temp"> <!--Added div here-->
+
          <div class="main-content"> <h3>Main Content</h3> 
-         <div class="tablefunctions">
-            <input type="text" placeholder="Search...">
-            <a href="#" class="btn btn-primary"><h4>Download</h4></a>
-            <a href="#" class="btn btn-primary"><h4>Delete</h4></a>
-         </div>
+         <input type="text" placeholder="Search..." class="searchbar">
 
+    <!-- ang table -->
             <h3>BOOKS</h3>
-                        <table class="table">
-                <thead>
-                    <tr>
-                    <th scope="col">Number</th>
-                    <th scope="col">Book Title</th>
-                    <th scope="col">Author</th>
-                    <th scope="col">Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Book1</td>
-                    <td>Clint</td>
-                    <td>May</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td>Book2</td>
-                    <td>Geanne</td>
-                    <td>November</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td>Book3</td>
-                    <td>Von</td>
-                    <td>July</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">4</th>
-                    <td>Book4</td>
-                    <td>Ralph</td>
-                    <td>September</td>
-                    </tr>
-                    <tr>
-                    <tr>
-                    <th scope="row">5</th>
-                    <td>Book5</td>
-                    <td>Vincent</td>
-                    <td>December</td>
-                    </tr>
-                    <tr>
-                </tbody>
-                </table>
-
-            </div> 
-
-            <!-- Scroll bar here is a must -->
-            <div class="sidebar"><h3>Sidebar</h3>
-             <div class="space"></div>
-              <div>
-                <a href="#"><h4>Mathematics</h4></a>
-              </div>
-              <div class="space"></div>
-              <div>
-                <a href="#"><h4>Physics</h4></a>
-              </div>
-              <div class="space"></div>
-              <div>
-                <a href="#"><h4>Programming</h4></a>
-              </div>
-              <div class="space"></div>
-              <div>
-                <a href="#"><h4>Electronics</h4></a>
-              </div>
-              <div class="space"></div>
-              <div>
-                <a href="#"><h4>General Education</h4></a> <!-- Here includes GEC/GEE subs -->
-              </div>
-              <div class="space"></div>
-              <div>
-                <a href="#"><h4>Research Articles</h4></a>
-              </div>
-              <div class="space"></div>
-              <div>
-                <a href="#"><h4>Entertainment</h4></a>
-              </div>
-            </div>
-    </div> <!--placed the main contents and sidebar in one container-->
-
-            <div class="body-lower">
-              <button id="logout-btn">Logout</button>
-              <script>
-                document.getElementById('logout-btn').addEventListener('click', function() {
-                  const confirmLogout = confirm('Malog out kana? Di kana magtuon haw?');
-                  if (confirmLogout) {
-                    window.location.href = 'index.php';
-                  }
-                });
-              </script>
-            </div>
-
-</body>
-
-
-
-
-<!-- Design testing,  delete if done-->
-<div class="des-test">
+            
+            <div class="des-test">
             <table class="tab-des-test">
               <tbody>
                 <tr class="tr-test">
@@ -142,6 +45,8 @@
                   </td>
                   <td class="td-test-desc">
                     Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Download</button>
+                    <button type="button" class="btn">Delete</button>
                   </td>
                 </tr>
                 <tr class="tr-test">
@@ -149,7 +54,9 @@
                     Image
                   </td>
                   <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
+                    Descriptions, aaaaaupload, and download 
+                    <button type="button" class="btn">Download</button>
+                    <button type="button" class="btn">Delete</button>
                   </td>
                 </tr>
                 <tr class="tr-test">
@@ -157,7 +64,9 @@
                     Image
                   </td>
                   <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
+                    Descriptions, aaaaaupload, and download 
+                    <button type="button" class="btn">Download</button>
+                    <button type="button" class="btn">Delete</button>
                   </td>
                 </tr>
                 <tr class="tr-test">
@@ -165,7 +74,9 @@
                     Image
                   </td>
                   <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
+                    Descriptions, aaaaaupload, and download 
+                    <button type="button" class="btn">Download</button>
+                    <button type="button" class="btn">Delete</button>
                   </td>
                 </tr>
                 <tr class="tr-test">
@@ -173,89 +84,40 @@
                     Image
                   </td>
                   <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
+                    Descriptions, aaaaaupload, and download 
+                    <button type="button" class="btn">Download</button>
+                    <button type="button" class="btn">Delete</button>
                   </td>
                 </tr>
               </tbody>
             </table>
+            
           </div>
+            </div> 
+            <!-- end of table -->
 
-          <!-- Design testing, delete if done-->
+            <div class="sidebar"><h3>Sidebar</h3>
+             <div class="space"></div>
+                <div>
+                    <a href="#"><h4 class="btn">Function</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="#"><h4 class="btn">Function</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="#"><h4 class = "btn">Function</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="#"><h4 class = "btn" >Function</h4></a>
+                </div>
+        </div>
 
+    </div>
 
-          
+</body>
 
 <footer>
     <div class="footerdes">
