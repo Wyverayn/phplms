@@ -11,60 +11,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel ="Stylesheet" href ="indexstyle.css">
     <link rel = "icon" href = "images/logoL.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-<div class = "body-home">
-    <div class="bluebalda">
-      
-    <div class = "black-fill">
-        <div class ="container">
-          
-        <nav class="navbar navbar-expand-lg bg-body-tertiary"
-            id = "homeNav">
-  <div class="container-fluid">
-        <a class="navbar-brand" href="#welcome">
-            <img src="images/logoL.png" width = "60">
-            
-    </a> 
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-            </li>
-            </ul>
-            <ul class = "navbar-nav me-right mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" href="#login">Login</a>
-      </li>
-      </ul>    
-    </div>
-  </div>
-</nav>
+        <div class="black-fill">
+            <div class="container">
+              <div class="title">
+                <a class="navbar-brand" href="#welcome">
+                            <!-- <img src="images/logoL.png" width="60" alt="Logo"> -->
+                            <div class="header-title no-highlight">LIBRI</div>
+                          </a>
+              </div>
+                <nav class="navbar navbar-expand-lg" id="homeNav">
+                    <div class="container-fluid">
+                         
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link " aria-current="page" href="index.php">   Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav me-right mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#login">Login</a>
+                                </li>
+                            </ul>    
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        
+            <div class="body-home">
 
     <section id="welcome"
         class = "welcome-text" >
         <h4>UNLOCK KNOWLEDGE</h4>
         <p>Explore, Learn, Succeed</p>
-        <img src="images/icon.jpg">
+        <img src="images/Untitled116_20240319221135.png">
     </section>
          
-<div class="container">
+    <section id = "login"
+         class="container">
   <div class="login-container">
     <h2>Login</h2>
-    <form action="authenticate.php" method="post">
+    <form method="post" action="authenticate.php" novalidate>
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
         <div class="input-group">
           <span class="input-group-text"><i class="fas fa-user"></i></span>
           <input type="text" name="uname" class="form-control" id="username" placeholder="Enter username">
+          <div class="invalid-feedback">Please enter your username.</div>
         </div>
       </div>
       <div class="mb-3">
@@ -72,16 +76,55 @@
         <div class="input-group">
           <span class="input-group-text"><i class="fas fa-lock"></i></span>
           <input type="password" name="pwd" class="form-control" id="password" placeholder="Enter password">
+          <div class="invalid-feedback">Please enter your password.</div>
         </div>
       </div>
       <a href="Register.php">Don't have an account? Click here</a><br><br>
       <input type="submit" class="btn btn-primary" name="login" value="Login">
-      
+      <div class="invalid-feedback d-block">Invalid username or password.</div>
     </form>
   </div>
-</div>
-
-
+    </section>
+    <br><br><br>
+    <section id="feedback"
+            div class="box mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title text-center mb-4">Feedback Form</h3>
+            <form id="feedbackForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="rating" class="form-label">Rating</label>
+                <select class="form-select" id="rating" name="rating" required>
+                  <option value="">Select Rating</option>
+                  <option value="1">1 Star</option>
+                  <option value="2">2 Stars</option>
+                  <option value="3">3 Stars</option>
+                  <option value="4">4 Stars</option>
+                  <option value="5">5 Stars</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="comments" class="form-label">Comments</label>
+                <textarea class="form-control" id="comments" name="comments" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane me-2"></i>Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+          </section>
 
 
     <section id = "about" 
@@ -90,7 +133,7 @@
     <div class="card mb-3 card-1">
 			  <div class="row g-0">
 			    <div class="col-md-4">
-			      <img src="images/logoL.png"  width = "100" >
+			      <img src="images/Untitled116_20240319221135.png"  width = "220" >
 			    </div>
 			    <div class="col-md-8">
 			      <div class="card-body">
@@ -104,15 +147,17 @@
             <div class = "copyright-text">
                 <p>Copyright &copy; 2024 LIBRI. All Rights Reserved.</p>
               </div>
-            </div>
           </section>
+
+
         </div>
-    </div> 
 </div>
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  </body>
 </html>
