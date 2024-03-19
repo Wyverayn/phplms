@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="userstyle.css">
 </head>
 <div class="header">
-    <h2>ADMIN</h2>
+    <h2 class="btn">ADMIN</h2>
 </div>
 <body>
+  <div class="upperbody">
+    <h1 class ="anim">LIBRI</h1>
+    <h2>WELCOME</h2>
+  </div>
   <div class="body">
          <!-- upperpart sang body ang may information -->
     <div class="info">
@@ -27,7 +31,8 @@
     </div>
 
          <div class="main-content"> <h3>Main Content</h3> 
-         <input type="text" placeholder="Search...">
+         <input type="text" placeholder="Search..." class="searchbar">
+         <button type="button" class="btn">UPLOAD</button>
 
     <!-- ang table -->
             <h3>BOOKS</h3>
@@ -40,99 +45,9 @@
                     Image
                   </td>
                   <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
                     Descriptions, aaaaaupload, and download
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
+                    <button type="button" class="btn">Download</button>
+                    <button type="button" class="btn">Delete</button>
                   </td>
                 </tr>
                 <tr class="tr-test">
@@ -140,9 +55,9 @@
                     Image
                   </td>
                   <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
+                    Descriptions, aaaaaupload, and download 
+                    <button type="button" class="btn">Download</button>
+                    <button type="button" class="btn">Delete</button>
                   </td>
                 </tr>
                 <tr class="tr-test">
@@ -150,9 +65,9 @@
                     Image
                   </td>
                   <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
+                    Descriptions, aaaaaupload, and download 
+                    <button type="button" class="btn">Download</button>
+                    <button type="button" class="btn">Delete</button>
                   </td>
                 </tr>
                 <tr class="tr-test">
@@ -160,9 +75,9 @@
                     Image
                   </td>
                   <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
+                    Descriptions, aaaaaupload, and download 
+                    <button type="button" class="btn">Download</button>
+                    <button type="button" class="btn">Delete</button>
                   </td>
                 </tr>
                 <tr class="tr-test">
@@ -170,9 +85,9 @@
                     Image
                   </td>
                   <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                    <button type="button">Download</button>
-                    <button type="button">Delete</button>
+                    Descriptions, aaaaaupload, and download 
+                    <button type="button" class="btn">Download</button>
+                    <button type="button" class="btn">Delete</button>
                   </td>
                 </tr>
               </tbody>
@@ -185,19 +100,19 @@
             <div class="sidebar"><h3>Sidebar</h3>
              <div class="space"></div>
                 <div>
-                    <a href="#"><h4>Function</h4></a>
+                    <a href="#"><h4 class="btn">Function</h4></a>
                 </div>
                 <div class="space"></div>
                 <div>
-                    <a href="#"><h4>Function</h4></a>
+                    <a href="#"><h4 class="btn">Function</h4></a>
                 </div>
                 <div class="space"></div>
                 <div>
-                    <a href="#"><h4>Function</h4></a>
+                    <a href="#"><h4 class = "btn">Function</h4></a>
                 </div>
                 <div class="space"></div>
                 <div>
-                    <a href="#"><h4>Function</h4></a>
+                    <a href="#"><h4 class = "btn" >Function</h4></a>
                 </div>
         </div>
 
