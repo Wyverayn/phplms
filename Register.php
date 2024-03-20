@@ -9,10 +9,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="Stylesheet" href="register.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+      <link rel="Stylesheet" href="register.css">
 </head>
 <body>
     <div class="body">
@@ -31,6 +30,10 @@
         </div>
 
         <div class="sign">
+        <div class="back mt-4 ">
+  <div class="rowback">
+    <div class="colback">
+      <a href="index.php" class="btn btn-primary"><i class="fas fa-arrow-left me-1"></i> Back</a> <!--temporary back button--> 
 
         <div class="container mt-5 ">
   <div class="row">
@@ -124,14 +127,17 @@
       </div>
     </div>
   </div>
+
+  
 </div>
+
         </div>
         </div>
         
 <!--code between is not necessary??? it should be automatically redirected to the login page-->
 <div class="box mt-5">
     <div class="col-md-12">
-      <table class="table table-striped">
+      <table class="table d">
         <thead>
           <tr>
             <th>ID Number</th>
@@ -178,8 +184,7 @@
 
         <!-- through here -->
 
-        <a href="index.php">Back</a> <!--temporary back button--> 
-
+        
     
     
 
