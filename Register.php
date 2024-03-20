@@ -119,7 +119,7 @@
                         <option value="CpE3A">BSCpE-3A</option>
               </select>
             </div>
-            <div class="d-grid gap-2">
+            <div class="reg d-grid gap-2">
               <button type="submit" class="btn btn-primary">Register</button>
             </div>
           </form>
