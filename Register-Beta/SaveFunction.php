@@ -12,6 +12,11 @@
         $un = $_POST['username'];
         $pass = $_POST['pass'];
         
+        if($id == NULL || $firstname == NULL || $lastname == NULL || $birth == NULL || $yearsec == NULL || $role == NULL || $un == NULL || $pass == NULL) {
+            echo "All fields are required.";
+            exit();
+        }
+
         $check = "SELECT * FROM accs WHERE idno = '$id' OR username = '$un'";
         $result = $conn->query($check);
 
