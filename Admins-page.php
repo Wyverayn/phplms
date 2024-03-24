@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>ADMIN</title>
-    <link rel="stylesheet" href="userstyle.css">
+    <link rel="stylesheet" href="adminstyle.css">
 </head>
 <div class="header">
     <h2 class="btn">ADMIN</h2>
