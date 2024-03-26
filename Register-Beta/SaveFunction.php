@@ -12,21 +12,30 @@
         $un = $_POST['username'];
         $pass = $_POST['pass'];
         
+        $check = "SELECT * FROM accs WHERE idno = '$id' OR username = '$un'";
+        $result = $conn->query($check);
 
-        $insert = "INSERT INTO users(`idno`, `lastname`, `firstname`, `mi`, `birthdate`, `role`, `year_section`)
-        VALUES('$id', '$lastname', '$firstname', '$mi', '$birth', '$role', '$yearsec')";
-
-        $insert = "INSERT INTO accs(`idno`, `username`, `pass`)
-        VALUES('$id', '$un', '$pass')";
-        
-        $result = $conn->query($insert);
-
-        if($result == TRUE){
-            $message = "Student was Successfully Saved.";
-            header('location: Register.php?notif='.$message);
-        } else {
-            $message = "Error Saving.";
-            header('location: Register.php?notif='.$message);
+        if($result->num_rows > 0) {
+        echo "Username or ID already in Databse, Please Try again!";
         }
+        else{
+                $insert = "INSERT INTO users(`idno`, `lastname`, `firstname`, `mi`, `birthdate`, `role`, `year_section`)
+                VALUES('$id', '$lastname', '$firstname', '$mi', '$birth', '$role', '$yearsec')";
+
+                $result = $conn->query($insert);
+
+                $insert = "INSERT INTO accs(`idno`, `username`, `pass`)
+                VALUES('$id', '$un', '$pass')";
+        
+                $result = $conn->query($insert);
+
+                if($result == TRUE){
+                    $message = "Student was Successfully Saved.";
+                    header('location: Register.php?notif='.$message);
+                } else {
+                    $message = "Error Saving.";
+                    header('location: Register.php?notif='.$message);
+                }
+            }
     }
 ?>

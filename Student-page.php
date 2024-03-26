@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>ADMIN</title>
+    <title>USER</title>
     <link rel="stylesheet" href="userstyle.css">
 </head>
 <div class="header">
-    <h2 class="btn">ADMIN</h2>
+    <h2 class="btn">USER</h2>
 </div>
 <body>
   <div class="upperbody">
@@ -30,32 +30,45 @@
 
     </div>
 
-
-
-
          <div class="main-content"> <h3>Main Content</h3> 
          <input type="text" placeholder="Search..." class="searchbar">
-         <button type="button" class="btn">UPLOAD</button>
 
     <!-- ang table -->
             <h3>BOOKS</h3>
             
             <div class="des-test">
-              <form action="upload.php" method="post" enctype="multipart/form-data">
-                <input type="file"  name="fileToUpload" id="fileToUpload">
-                <input type="submit" value="Upload File" name="submit"> 
-              </form>
+                <!-- Temporary welcome msg, paki ilis if possible, pwede man kamo kabutang butang design diri. Bale daw ka lobby na diri siya pag enter niyo library -->
+                Welcome to Libri, school library in your pocket. Please go to the shelf you seek.
             </div>
-          </div> 
+            </div> 
+            <!-- end of table -->
 
-            <!-- table removed -->
-
-            <div class="sidebar"><h3>wwwwwwwwwwwwwSidebar</h3>
+            <div class="sidebar"><h3>Shelves</h3>
              <div class="space"></div>
                 <div>
-                    <a href="#"><h4 class="btn">Function</h4></a>
+                    <a href="Student-page-math.php"><h4 class="btn">Mathematics</h4></a>
                 </div>
-        </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-phys.php"><h4 class="btn">Physics</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-elex.php"><h4 class = "btn">Electrical/Electronics</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-comp.php"><h4 class = "btn" >Programming</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-gec.php"><h4 class = "btn" >General Education</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-ent.php"><h4 class = "btn" >Entertainment/Literatures</h4></a>
+                </div>
+            </div>
 
     </div>
 

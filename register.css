@@ -1,0 +1,104 @@
+@font-face {
+    font-family: plushfont;
+    src: url(images/plushblack.otf);
+}
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+.body{
+    background-color: #1f2833;
+    height: 1900px;
+    
+}
+
+.body-1{
+    display: flex;
+}
+
+.group{
+    display: flex;
+    
+}
+
+.blue-streak{
+    background-color: #45a29e;
+    height: 1150px;
+    width: 50px;
+    margin-top: 30px;
+    margin-right: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.quote{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    margin-top: 100px;
+}
+.quote p{
+    font-size: 60px;
+    font-family: plushfont;
+    font-weight: bolder;
+    margin-left: 0px;
+    
+    color: #c5c6c7;
+}
+
+.quote img{
+    margin-left: 0;
+}
+.sign{
+    background-color: #45a29e;
+    height: 1150px;
+    width: 600px;
+    padding-left: 80px;
+    margin-left: 200px;
+    margin-top: 30px;
+    margin-right: 20px;
+    font-family: plushfont;
+}
+.container{
+    width: 900px !important;
+    
+}
+
+.box table{
+    width: 700px;
+    margin-left: -400px; 
+}
+
+.box th,td{
+    border-bottom: 1px solid #ddd;
+}
+
+.box th{
+    background-color: #45a29e;
+    color: white;
+    font-family: plushfont;
+}
+
+.back a{
+    color: #c5c6c7;
+    background-color: #1f2833;
+    border-radius: 25px;
+    font-size: 15px;
+    width: 90px;
+    height: 40px;
+   padding-left: 14px !important; 
+   margin-bottom: 4px;
+   margin-left: 380px;
+   margin-top: 16px;
+}
+
+ .back a:hover{
+    background-color: #45a29e;
+    color: white;
+    transition: 0.4s;
+} 
+.reg button{
+    background-color: #1f2833;
+}

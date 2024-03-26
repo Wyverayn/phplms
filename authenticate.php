@@ -14,14 +14,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 session_start();
 
                 $_SESSION['uname'] = $row['username'];
-                $_SESSION['pwd'] = $row['password'];
+                $_SESSION['pwd'] = $row['pass'];
                 $SESSION['login'] = TRUE;
 
                 if($row['user_role'] == 'Teacher') {
                     header('location: Admins-page.php');
                 }
                 else {
-                    header('location: Students-page.php');
+                    header('location: Student-page.php');
                 }
             }
             else {
