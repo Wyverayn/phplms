@@ -41,97 +41,33 @@
             <h3>BOOKS</h3>
             
             <div class="des-test">
-<<<<<<< HEAD
               <form action="upload.php" method="post" enctype="multipart/form-data">
                 <input type="file"  name="fileToUpload" id="fileToUpload">
                 <input type="submit" value="Upload File" name="submit"> 
               </form>
             </div>
           </div> 
-=======
-            <table class="tab-des-test">
-              <tbody>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Download</button>
-                    <button type="button" class="btn">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button" class="btn">Download</button>
-                    <button type="button" class="btn">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button" class="btn">Download</button>
-                    <button type="button" class="btn">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button" class="btn">Download</button>
-                    <button type="button" class="btn">Delete</button>
-                  </td>
-                </tr>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    Descriptions, aaaaaupload, and download 
-                    <button type="button" class="btn">Download</button>
-                    <button type="button" class="btn">Delete</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+
+          <div class="upload-pdf">
+            <select id="Section" name="Section" class="form-select" required>
+              <option value="" disabled selected>Select Section</option>
+              <option value="math">Mathematics</option>
+              <option value="phys">Physics</option>
+              <option value="elex">Electrical/Electronics</option>
+              <option value="comp">Computer Studies</option>
+              <option value="gec">General Education</option>
+              <option value="ent">Entertainment/Literatures</option>
+              <option value="misc">Miscellaneous</option>
+            </select>
+            <input type="text" placeholder="ID Number" id="idno" name="idnumber" class="form-control" required>
+            <input type="text" placeholder="ID Number" id="idno" name="idnumber" class="form-control" required>
+          </div>
+            
             
           </div>
             </div> 
             <!-- end of table -->
->>>>>>> 9d35ae0518d674c1426c78663061ed62f9a72d64
 
-            <!-- table removed -->
-
-            <div class="sidebar"><h3>wwwwwwwwwwwwwSidebar</h3>
-             <div class="space"></div>
-                <div>
-                    <a href="#"><h4 class="btn">Function</h4></a>
-<<<<<<< HEAD
-=======
-                </div>
-                <div class="space"></div>
-                <div>
-                    <a href="#"><h4 class="btn">Function</h4></a>
-                </div>
-                <div class="space"></div>
-                <div>
-                    <a href="#"><h4 class = "btn">Function</h4></a>
-                </div>
-                <div class="space"></div>
-                <div>
-                    <a href="#"><h4 class = "btn" >Function</h4></a>
->>>>>>> 9d35ae0518d674c1426c78663061ed62f9a72d64
-                </div>
-        </div>
 
     </div>
 

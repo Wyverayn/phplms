@@ -33,15 +33,25 @@
          <div class="main-content"> <h3>Main Content</h3> 
          <input type="text" placeholder="Search..." class="searchbar">
 
-    <!-- ang table -->
             <h3>BOOKS</h3>
             
+
+
+            <!-- Temporary welcome message and basic instructions, pakiedit please.  -->
+            <!-- Pwede kamo di kabutang design design or someting like daw himuon ni siya nga student lounge, depende sa inyo -->
+
             <div class="des-test">
-                <!-- Temporary welcome msg, paki ilis if possible, pwede man kamo kabutang butang design diri. Bale daw ka lobby na diri siya pag enter niyo library -->
-                Welcome to Libri, school library in your pocket. Please go to the shelf you seek.
+              Welcome to libri, "User". A school library in your device.
+              Looking for study materials? Please proceed to the shelves.
+              You may also use the search bar and use the code provided 
+              by your respective instructors or just search for the title of the book.
             </div>
-            </div> 
-            <!-- end of table -->
+
+            <!-- end  -->
+
+
+
+          </div> 
 
             <div class="sidebar"><h3>Shelves</h3>
              <div class="space"></div>
@@ -58,7 +68,11 @@
                 </div>
                 <div class="space"></div>
                 <div>
-                    <a href="Student-page-comp.php"><h4 class = "btn" >Programming</h4></a>
+                    <a href="Student-page-comp.php"><h4 class = "btn" >Computer Studies</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-chem.php"><h4 class = "btn" >Chemistry</h4></a>
                 </div>
                 <div class="space"></div>
                 <div>
@@ -66,7 +80,11 @@
                 </div>
                 <div class="space"></div>
                 <div>
-                    <a href="Student-page-ent.php"><h4 class = "btn" >Entertainment/Literatures</h4></a>
+                    <a href="Student-page-ent.php"><h4 class = "btn" >Entertainment/Literature</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-misc.php"><h4 class = "btn" >Miscellaneous</h4></a>
                 </div>
             </div>
 

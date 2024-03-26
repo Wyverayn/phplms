@@ -96,7 +96,7 @@
             </div> 
             <!-- end of table -->
 
-            <div class="sidebar"><h3>Shelves</h3>
+            <div class="sidebar"><h3>Sidebar</h3>
              <div class="space"></div>
                 <div>
                     <a href="Student-page-math.php"><h4 class="btn">Mathematics</h4></a>
@@ -111,7 +111,11 @@
                 </div>
                 <div class="space"></div>
                 <div>
-                    <a href="Student-page-comp.php"><h4 class = "btn" >Programming</h4></a>
+                    <a href="Student-page-comp.php"><h4 class = "btn" >Computer Studies</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-chem.php"><h4 class = "btn" >Chemistry</h4></a>
                 </div>
                 <div class="space"></div>
                 <div>
@@ -119,10 +123,14 @@
                 </div>
                 <div class="space"></div>
                 <div>
-                    <a href="Student-page.php"><h4 class = "btn" >Entertainment/Literatures</h4></a>
+                    <a href="Student-page-ent.php"><h4 class = "btn" >Entertainment/Literature</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-misc.php"><h4 class = "btn" >Miscellaneous</h4></a>
                 </div>
             </div>
-
+            
     </div>
 
 </body>
