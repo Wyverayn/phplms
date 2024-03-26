@@ -1,47 +1,33 @@
 <?php
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+include "libri_dbcon.php";
 
+//target directory
+$targetDir = "uploads/";
 
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-}
+//check if the file was uploaded
+if(isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] == 0) {
+    $fileName = basename($_FILES["fileToUpload"]["name"]);
+    $sub = $_POST['subject'];
+    $code = $_POST['pdf-code'];
 
+    $targetPath = $targetDir.$fileName;
 
-if($imageFileType != "pdf") {
-    echo "Sorry, only PDF files are allowed.";
-    $uploadOk = 0;
-}
+    if(move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetPath)) {
 
-
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-
-} else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        $conn = mysqli_connect("localhost", "root", "", "teacher_files");
-
-        if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
+        $sql = "INSERT INTO `pdf-files` (`pdf-name`, `pdf-sub`, `pdf-code`) VALUES ('$fileName', '$sub', '$code')";
+        if($conn->query($sql) == true) {
+            echo "File uploaded and saved to Database";
         }
-
-        $subject = $_POST['subject'];
-        $filename = basename($_FILES["fileToUpload"]["name"]);
-
-        $sql = "INSERT INTO files (subject, filename) VALUES ('$subject', '$filename')";
-
-        if (mysqli_query($conn, $sql)) {
-            echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        else {
+            echo "Error: ".$sql." Error Details: ".$conn->error;
         }
-
-        mysqli_close($conn);
-    } else {
-        echo "Sorry, there was an error uploading your file.";
+    }
+    else {
+        echo "Error moving the file";
     }
 }
+else {
+    echo "File not uploaded.";
+}
+$conn->close();
 ?>

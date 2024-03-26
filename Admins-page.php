@@ -33,9 +33,10 @@
 
 
 
-         <div class="main-content"> <h3>Main Content</h3> 
-         <input type="text" placeholder="Search..." class="searchbar">
-         <button type="button" class="btn">UPLOAD</button>
+         <div class="main-content"> 
+          <h3>Main Content</h3> 
+          <input type="text" placeholder="Search..." class="searchbar">
+          <button type="button" class="btn">UPLOAD</button>
 
     <!-- ang table -->
             <h3>BOOKS</h3>
@@ -44,24 +45,24 @@
               <form action="upload.php" method="post" enctype="multipart/form-data">
                 <input type="file"  name="fileToUpload" id="fileToUpload">
                 <input type="submit" value="Upload File" name="submit"> 
+                <div class="upload-pdf">
+            
+                <!-- need butangan class, leave nalang ni sa mga ga css -->
+                <select id="subject" name="subject" class="" required>
+                  <option value="math">Mathematics</option>
+                  <option value="phys">Physics</option>
+                  <option value="elex">Electrical/Electronics</option>
+                  <option value="comp">Computer Studies</option>
+                  <option value="gec">General Education</option>
+                  <option value="ent">Entertainment/Literatures</option>
+                  <option value="misc">Miscellaneous</option>
+                </select>
+                <input type="text" placeholder="PDF Code" id="pdf-code" name="pdf-code" class="" required>
+                <input type="text" placeholder="Please put the file description here." id="pdf-desc" name="pdf-desc" class="" maxlength="200"> <!-- padakuan ni dapat -->
+          </div>
               </form>
             </div>
           </div> 
-
-          <div class="upload-pdf">
-            <select id="Section" name="Section" class="form-select" required>
-              <option value="" disabled selected>Select Section</option>
-              <option value="math">Mathematics</option>
-              <option value="phys">Physics</option>
-              <option value="elex">Electrical/Electronics</option>
-              <option value="comp">Computer Studies</option>
-              <option value="gec">General Education</option>
-              <option value="ent">Entertainment/Literatures</option>
-              <option value="misc">Miscellaneous</option>
-            </select>
-            <input type="text" placeholder="ID Number" id="idno" name="idnumber" class="form-control" required>
-            <input type="text" placeholder="ID Number" id="idno" name="idnumber" class="form-control" required>
-          </div>
             
             
           </div>
