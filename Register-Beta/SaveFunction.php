@@ -12,12 +12,26 @@
         $un = $_POST['username'];
         $pass = $_POST['pass'];
         
+<<<<<<< HEAD
         $check = "SELECT * FROM accs WHERE idno = '$id' OR username = '$un'";
         $result = $conn->query($check);
 
         if($result->num_rows > 0) {
         echo "Username or ID already in Databse, Please Try again!";
         }
+=======
+        if($id == NULL || $firstname == NULL || $lastname == NULL || $birth == NULL || $yearsec == NULL || $role == NULL || $un == NULL || $pass == NULL) {
+            echo "All fields are required.";
+            exit();
+        }
+
+        $check = "SELECT * FROM accs WHERE idno = '$id' OR username = '$un'";
+        $result = $conn->query($check);
+
+        if($result->num_rows > 0) {
+        echo "Username or ID already in Databse, Please Try again!";
+        }
+>>>>>>> 9d35ae0518d674c1426c78663061ed62f9a72d64
         else{
                 $insert = "INSERT INTO users(`idno`, `lastname`, `firstname`, `mi`, `birthdate`, `role`, `year_section`)
                 VALUES('$id', '$lastname', '$firstname', '$mi', '$birth', '$role', '$yearsec')";

@@ -5,12 +5,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST['uname'];
         $password = $_POST['pwd'];
        
-        $login = "SELECT * FROM users WHERE username = '$username'";
+        $login = "SELECT * FROM accs WHERE username = '$username'";
         $result = $conn->query($login);
 
         if($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            if($row['password'] == $password) {
+            if($row['pass'] == $password) {
                 session_start();
 
                 $_SESSION['uname'] = $row['username'];

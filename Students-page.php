@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>ADMIN</title>
-    <link rel="stylesheet" href="adminstyle.css">
+    <title>USER</title>
+    <link rel="stylesheet" href="userstyle.css">
 </head>
 <div class="header">
-    <h2 class="btn">ADMIN</h2>
+    <h2 class="btn">USER</h2>
 </div>
 <body>
   <div class="upperbody">
@@ -30,25 +30,13 @@
 
     </div>
 
-
-
-
          <div class="main-content"> <h3>Main Content</h3> 
          <input type="text" placeholder="Search..." class="searchbar">
-         <button type="button" class="btn">UPLOAD</button>
 
     <!-- ang table -->
             <h3>BOOKS</h3>
             
             <div class="des-test">
-<<<<<<< HEAD
-              <form action="upload.php" method="post" enctype="multipart/form-data">
-                <input type="file"  name="fileToUpload" id="fileToUpload">
-                <input type="submit" value="Upload File" name="submit"> 
-              </form>
-            </div>
-          </div> 
-=======
             <table class="tab-des-test">
               <tbody>
                 <tr class="tr-test">
@@ -107,16 +95,11 @@
           </div>
             </div> 
             <!-- end of table -->
->>>>>>> 9d35ae0518d674c1426c78663061ed62f9a72d64
 
-            <!-- table removed -->
-
-            <div class="sidebar"><h3>wwwwwwwwwwwwwSidebar</h3>
+            <div class="sidebar"><h3>Sidebar</h3>
              <div class="space"></div>
                 <div>
                     <a href="#"><h4 class="btn">Function</h4></a>
-<<<<<<< HEAD
-=======
                 </div>
                 <div class="space"></div>
                 <div>
@@ -129,7 +112,6 @@
                 <div class="space"></div>
                 <div>
                     <a href="#"><h4 class = "btn" >Function</h4></a>
->>>>>>> 9d35ae0518d674c1426c78663061ed62f9a72d64
                 </div>
         </div>
 
