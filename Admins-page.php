@@ -253,11 +253,15 @@
             <thead>
                 <tr>
                     <th><h6>contact</h6></th>
-                    <th><h6>feedback</h6></th>
+                    <th><h6>
+                      <a href="tempfeedback/mainpage.php">
+                        feedback
+                      </a> </h6></th>
                     <th><h6>more</h6></th>
                 </tr>
             </thead>
         </div>
         </div>
-</footer>
+      
+      </footer>
 </html>

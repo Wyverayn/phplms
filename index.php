@@ -36,6 +36,9 @@
                                     <a class="nav-link " aria-current="page" href="index.php">   Home</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link " aria-current="page" href="tempfeedback/feedbackmainpage.php">   Feedback</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="#about">About</a>
                                 </li>
                             </ul>
@@ -62,13 +65,27 @@
          class="container">
   <div class="login-container">
     <h2>Login</h2>
+    <?php
+            if(isset($_GET['notif'])){
+                $message = $_GET['notif'];
+                echo '<h6 id="notif" style="color:blue;">' . $message . '</h3>';
+
+                 echo '
+                     <script>
+                         setTimeout(function(){
+                             document.getElementById("notif").style.display = "none";
+                         }, 3000);
+                     </script>
+                 ';
+            }
+        ?>
     <form method="post" action="authenticate.php" novalidate>
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
         <div class="input-group">
           <span class="input-group-text"><i class="fas fa-user"></i></span>
           <input type="text" name="uname" class="form-control" id="username" placeholder="Enter username">
-          <div class="invalid-feedback">Please enter your username.</div>
+
         </div>
       </div>
       <div class="mb-3">
@@ -76,17 +93,17 @@
         <div class="input-group">
           <span class="input-group-text"><i class="fas fa-lock"></i></span>
           <input type="password" name="pwd" class="form-control" id="password" placeholder="Enter password">
-          <div class="invalid-feedback">Please enter your password.</div>
         </div>
       </div>
       <a href="Register.php">Don't have an account? Click here</a><br><br>
       <input type="submit" class="btn btn-primary" name="login" value="Login">
-      <div class="invalid-feedback d-block">Invalid username or password.</div>
     </form>
   </div>
     </section>
+
+
     <br><br><br>
-    <section id="feedback"
+    <!-- <section id="feedback"
             div class="box mt-5">
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -124,7 +141,7 @@
       </div>
     </div>
   
-          </section>
+          </section> -->
 
 
     <section id = "about" 
