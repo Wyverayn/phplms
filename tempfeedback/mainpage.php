@@ -84,7 +84,7 @@
   require 'config.php';
    if (isset($_SESSION['login_user'])) {
           $userLoggedIn = $_SESSION['login_user'];
-          $result = mysqli_query($con,"SELECT * FROM poll");
+          $result = mysqli_query($conn,"SELECT * FROM poll");
 
             echo "<table border='1' id='customers'>
             <tr>
