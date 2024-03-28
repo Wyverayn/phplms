@@ -48,7 +48,7 @@
 
         <?php
         include "libri_dbcon.php";
-        $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'math'";
+        $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'gec'";
         $display = $conn->query($pdf);
             
         if ($display->num_rows > 0) {
