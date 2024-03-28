@@ -6,7 +6,7 @@ class DBController {
     private $password = "";
     private $database = "feedback";
     
-    private static $con;
+    private static $conn;
     
     function __construct() {
         $this->conn = $this->connectDB();
