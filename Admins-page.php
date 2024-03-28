@@ -53,6 +53,7 @@
                   <option value="phys">Physics</option>
                   <option value="elex">Electrical/Electronics</option>
                   <option value="comp">Computer Studies</option>
+                  <option value="comp">Chemistry</option>
                   <option value="gec">General Education</option>
                   <option value="ent">Entertainment/Literatures</option>
                   <option value="misc">Miscellaneous</option>
@@ -61,9 +62,168 @@
                 <input type="text" placeholder="Please put the file description here." id="pdf-desc" name="pdf-desc" class="" maxlength="200"> <!-- padakuan ni dapat -->
           </div>
               </form>
+
+
+
+
+
+
+
+
+
+              <?php
+              include "libri_dbcon.php";
+
+              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'math'";
+              $display = $conn->query($pdf);
+              echo "<h5>Mathematicss:</h5>";
+              if ($display->num_rows > 0) {
+                echo "<ul>";
+                while ($row = $display->fetch_assoc()) {
+                  $filename = $row["pdf-name"];
+                  echo "<li>
+                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
+                  </li>";
+                }
+                echo "</ul>";
+              } else {
+               echo "No files uploaded yet.";
+              }
+
+
+              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'phys'";
+              $display = $conn->query($pdf);
+              echo "<h5>Physics:</h5>";
+              if ($display->num_rows > 0) {
+                echo "<ul>";
+                while ($row = $display->fetch_assoc()) {
+                  $filename = $row["pdf-name"];
+                  echo "<li>
+                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
+                  </li>";
+                }
+                echo "</ul>";
+              } else {
+               echo "No files uploaded yet.";
+              }
+
+
+              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'elex'";
+              $display = $conn->query($pdf);
+              echo "<h5>Electrical/Electronics:</h5>";
+              if ($display->num_rows > 0) {
+                echo "<ul>";
+                while ($row = $display->fetch_assoc()) {
+                  $filename = $row["pdf-name"];
+                  echo "<li>
+                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
+                  </li>";
+                }
+                echo "</ul>";
+              } else {
+               echo "No files uploaded yet.";
+              }
+
+
+              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'comp'";
+              $display = $conn->query($pdf);
+              echo "<h5>Computer Studies:</h5>";
+              if ($display->num_rows > 0) {
+                echo "<ul>";
+                while ($row = $display->fetch_assoc()) {
+                  $filename = $row["pdf-name"];
+                  echo "<li>
+                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
+                  </li>";
+                }
+                echo "</ul>";
+              } else {
+               echo "No files uploaded yet.";
+              }
+
+
+              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'chem'";
+              $display = $conn->query($pdf);
+              echo "<h5>Chemistry:</h5>";
+              if ($display->num_rows > 0) {
+                echo "<ul>";
+                while ($row = $display->fetch_assoc()) {
+                  $filename = $row["pdf-name"];
+                  echo "<li>
+                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
+                  </li>";
+                }
+                echo "</ul>";
+              } else {
+               echo "No files uploaded yet.";
+              }
+
+
+              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'gec'";
+              $display = $conn->query($pdf);
+              echo "<h5>General Education:</h5>";
+              if ($display->num_rows > 0) {
+                echo "<ul>";
+                while ($row = $display->fetch_assoc()) {
+                  $filename = $row["pdf-name"];
+                  echo "<li>
+                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
+                  </li>";
+                }
+                echo "</ul>";
+              } else {
+               echo "No files uploaded yet.";
+              }
+
+
+              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'ent'";
+              $display = $conn->query($pdf);
+              echo "<h5>Entertainment/Literatures:</h5>";
+              if ($display->num_rows > 0) {
+                echo "<ul>";
+                while ($row = $display->fetch_assoc()) {
+                  $filename = $row["pdf-name"];
+                  echo "<li>
+                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
+                  </li>";
+                }
+                echo "</ul>";
+              } else {
+               echo "No files uploaded yet.";
+              }
+
+
+              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'misc'";
+              $display = $conn->query($pdf);
+              echo "<h5>Miscellaneous:</h5>";
+              if ($display->num_rows > 0) {
+                echo "<ul>";
+                while ($row = $display->fetch_assoc()) {
+                  $filename = $row["pdf-name"];
+                  echo "<li>
+                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
+                  </li>";
+                }
+                echo "</ul>";
+              } else {
+               echo "No files uploaded yet.";
+              }
+
+            ?>
+
+
+
+
             </div>
           </div> 
-            
             
           </div>
             </div> 
