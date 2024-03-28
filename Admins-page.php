@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>ADMIN</title>
     <link rel="stylesheet" href="adminstyle.css">
-</head>
+  </head>
 <div class="header">
-    <h2 class="btn">ADMIN</h2>
+  <h2 class="btn">ADMIN</h2>
 </div>
 <body>
   <div class="upperbody">
@@ -71,6 +71,19 @@
 
 
     </div>
+
+
+    <!-- log out btn relocate please -->
+    <script>
+      function confirmLogout() {
+        if (confirm("Tapos nani sir? Ilog out nani?")) {
+          window.location = "index.php";
+        }
+      }
+    </script>
+
+    <button onclick="confirmLogout()">Logout</button>
+    <!-- end -->
 
 </body>
 
