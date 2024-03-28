@@ -5,17 +5,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST['uname'];
         $password = $_POST['pwd'];
        
-        $login = "SELECT * FROM accs WHERE username = '$username'";
+        $login = "SELECT * FROM users WHERE username = '$username'";
         $result = $conn->query($login);
 
         if($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            if($row['pass'] == $password) {
+            if($row['password'] == $password) {
                 session_start();
 
                 $_SESSION['uname'] = $row['username'];
-                $_SESSION['pwd'] = $row['pass'];
-                $SESSION['login'] = TRUE;
+                $_SESSION['pwd'] = $row['password'];
+                $_SESSION['login'] = TRUE;
 
                 if($row['user_role'] == 'Teacher') {
                     header('location: Admins-page.php');
