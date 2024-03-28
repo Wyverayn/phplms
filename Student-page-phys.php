@@ -58,7 +58,6 @@
             $filename = $row["pdf-name"];
             echo "<li>
               <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
-              <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
               </li>";
             }
             echo "</ul>";
