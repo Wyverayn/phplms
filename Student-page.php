@@ -42,10 +42,9 @@
 
     </div>
 
-         <div class="main-content"> <h3>Main Content</h3> 
+         <div class="main-content"> <h3>BOOKS</h3> 
          <input type="text" placeholder="Search..." class="searchbar">
 
-            <h3>BOOKS</h3>
             
 
 
@@ -65,7 +64,7 @@
 
           </div> 
 
-            <div class="sidebar"><h3>Shelves</h3>
+            <div class="sidebar"><h3>SHELVES</h3>
              <div class="space"></div>
                 <div>
                     <a href="Student-page-math.php"><h4 class="btn">Mathematics</h4></a>
