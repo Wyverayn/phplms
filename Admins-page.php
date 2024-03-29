@@ -9,6 +9,20 @@
   </head>
 <div class="header">
   <h2 class="btn">ADMIN</h2>
+  <input type="text" placeholder="Search..." class="searchbar">
+
+  <div class="logoutbtn">
+   <script>
+      function confirmLogout() {
+        if (confirm("Tapos nani sir? Ilog out nani?")) {
+          window.location = "index.php";
+        }
+      }
+    </script>
+
+    <button onclick="confirmLogout()" class="btn">LOG OUT</button>
+    </div>
+
 </div>
 <body>
   <div class="upperbody">
@@ -233,18 +247,7 @@
     </div>
 
 
-    <!-- log out btn relocate please -->
-    <script>
-      function confirmLogout() {
-        if (confirm("Tapos nani sir? Ilog out nani?")) {
-          window.location = "index.php";
-        }
-      }
-    </script>
-
-    <button onclick="confirmLogout()">Logout</button>
-    <!-- end -->
-
+   
 </body>
 
 <footer>
