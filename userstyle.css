@@ -74,7 +74,7 @@
   /* margin-left: 128px;
   margin-right: 128px; */
   border: solid black 1px;
-  min-height: 1000px;
+  height: auto;
   overflow: hidden;
   background-color:  #171718;
 
@@ -156,7 +156,7 @@ margin-left: 5px;
   }
   .sidebar {
     width: auto;
-    height: 800px;
+    height: 700px;
     overflow-y: scroll;
     padding-top: 50px;
     padding-left: 100px;
