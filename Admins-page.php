@@ -11,7 +11,9 @@
   <h2 class="btn">ADMIN</h2>
   <input type="text" placeholder="Search..." class="searchbar">
 
-  <div class="logoutbtn">
+
+
+  <!-- ginkakas ko ang div container niya kay nalapawan siya sang title container nga daku kung ipatunga -->
    <script>
       function confirmLogout() {
         if (confirm("Tapos nani sir? Ilog out nani?")) {
@@ -19,9 +21,8 @@
         }
       }
     </script>
-
     <button onclick="confirmLogout()" class="btn">LOG OUT</button>
-    </div>
+
 
 </div>
 <body>
