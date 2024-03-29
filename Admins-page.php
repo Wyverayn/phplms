@@ -21,8 +21,9 @@
         }
       }
     </script>
+    <div class="logoutbtn">
     <button onclick="confirmLogout()" class="btn">LOG OUT</button>
-
+    </div>
 
 </div>
 <body>
@@ -77,13 +78,16 @@
                 <input type="text" placeholder="Please put the file description here." id="pdf-desc" name="pdf-desc" class="" maxlength="200"> <!-- padakuan ni dapat -->
           </div>
               </form>
+          </div>
+          </div>
 
 
 
 
 
-
-
+              <div class="sidebar">
+                <h3>SHELVES</h3>
+                <div class="space"></div>
 
 
               <?php
@@ -236,7 +240,7 @@
 
 
 
-
+            </div>
             </div>
           </div> 
             
