@@ -37,32 +37,46 @@
 
     <div class="main-content"> 
       <h3>Main Content</h3> 
-      <input type="text" placeholder="Search..." class="searchbar">
+      <form method="post">
+        <input type="text" name="search-string" placeholder="Search..." class="searchbar">
+        <button type="submit">Submit</button>
+      </form>
       <h3>BOOKS</h3>
             
       <div class="des-test">
         
-      
-      
-        <!-- ginupdate di ang table, pakiideahan ang css please -->
 
         <?php
         include "libri_dbcon.php";
-        $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'elex'";
+        $search_string = $_POST['search-string'];
+        $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'ent' AND `pdf-code` LIKE '$search_string%'";
         $display = $conn->query($pdf);
-            
+
         if ($display->num_rows > 0) {
-          echo "<h2>Uploaded Files:</h2>";
-          echo "<ul>";
-          while ($row = $display->fetch_assoc()) {
-            $filename = $row["pdf-name"];
-            echo "<li>
-              <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+          if($search_string != NULL) {
+            echo "<h2>Uploaded Files:</h2>";
+            echo "<ul>";
+            while ($row = $display->fetch_assoc()) {
+              $filename = $row["pdf-name"];
+              echo "<li>
+                <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+                </li>";
+            }
+              echo "</ul>";
+          } else {
+            $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'ent'";
+            echo "<h2>Uploaded Files:</h2>";
+            echo "<ul>";
+            while ($row = $display->fetch_assoc()) {
+              $filename = $row["pdf-name"];
+              echo "<li>
+                <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
               </li>";
             }
-            echo "</ul>";
+              echo "</ul>";
+          }
         } else {
-          echo "No files uploaded yet.";
+          echo "No files uploaded";
         }
         ?>
 

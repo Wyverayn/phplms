@@ -43,7 +43,7 @@
     </div>
 
          <div class="main-content"> <h3>Main Content</h3> 
-         <input type="text" placeholder="Search..." class="searchbar">
+         <input type="text" name="search-string" placeholder="Search..." class="searchbar">
 
             <h3>BOOKS</h3>
             
