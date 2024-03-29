@@ -4,10 +4,21 @@
 <head>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
+    
+    @font-face {
+    font-family: plushfont;
+    src: url(images/plushblack.otf);
+}
+* {
+    padding: 0;
+    margin:0;
+}
 #customers {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-family: plushfont;
+  font-weight: 600;
   border-collapse: collapse;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 #customers td, #customers th {
@@ -28,7 +39,7 @@
 }
 .block {
   display: block;
-  width: 100%;
+  width: 80%;
   border: none;
   background-color: #0b0c10;
   color: white;
@@ -42,6 +53,76 @@
   background-color: #ddd;
   color: black;
 }
+
+.headr h3{
+  color: #c5c6c7;
+  font-family: plushfont;
+  font-weight: 600;
+  font-size: 60px;
+  margin-left: 80px;
+  margin-top: 30px;
+}
+
+.headr{
+  width: auto;
+  height: 250px;
+  background-color: #1f2833;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.banner{
+  margin-right: 80px;
+  
+}
+
+.square{
+  height: 160px;
+  width: 180px;
+  background-color: #c5c6c7;
+}
+.triangle{
+  width: 0;
+	height: 0;
+	border-left: 90px solid transparent;
+	border-right: 90px solid transparent;
+	border-top: 50px solid #c5c6c7;
+}
+
+.middle{
+  height: auto  ;
+  padding-top: 50px;
+  background-color: #c5c6c7;
+  padding-bottom: 40px;
+}
+
+.backbut {
+    color: #c5c6c7;
+    background-color: #1f2833;
+    border-radius: 25px;
+    width: 80px;
+    height: 40px;
+   margin-bottom: 4px;
+   margin-left: 80px;
+   margin-top: 16px;
+   padding-top: 5px;
+   padding-left: 20px;
+}
+
+.backbut a {
+  font-family: plushfont;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+ .backbut:hover{
+    background-color: #c5c6c7;
+    color: #1f2833;
+    transition: 0.8s;
+} 
+
 </style>
   <meta charset="UTF-8">
   <title>Feedback</title>
@@ -50,8 +131,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  
-      <link rel="stylesheet" href="style1.css">
+
 
   
 </head>
@@ -77,13 +157,26 @@
   </form> -->
 
   <div class="headr">
-<h3>Feedback List</h3>
+    
+  <h3 style="margin-left: 80px;">Feedback <br> <span style="margin-left: 120px;">List</span></h3>
+
+  <div class="banner">
+    <div class="square">
+      <img src="Untitled116_20240319220931.png" width="180">
+
+    </div>
+    <div class="triangle">
+
+    </div>
+  </div>
 </div>
-<?php 
+
+<div class="middle">
+  <?php 
   session_start();
   require 'config.php';
-   if (isset($_SESSION['login_user'])) {
-          $userLoggedIn = $_SESSION['login_user'];
+   if (isset($_SESSION['login'])) {
+          $userLoggedIn = $_SESSION['login'];
           $result = mysqli_query($conn,"SELECT * FROM poll");
 
             echo "<table border='1' id='customers'>
@@ -91,7 +184,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>feedback</th>
+            <th>Feedback</th>
             <th>Suggestions</th>
             </tr>";
 
@@ -110,11 +203,18 @@
   else {
   //header("Location: index.php");
   }
-
-
-
-
    ?>
+
+<div class="backbut">
+  <a href="../Admins-page.php" class="btn btn-primary"><i class="fas fa-arrow-left me-1"></i> Back</a>
+</div>
+
+</div>
+
+
+  
+
+
 
   
     

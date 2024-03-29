@@ -36,10 +36,7 @@ body {
   background-color: white !important;
   
 }
-.headr{
-  color: #c5c6c7;
-  font-family: plushfont;
-}
+
 .log-form {
   width: 40%;
   min-width: 320px;
@@ -134,3 +131,4 @@ body {
 .log-form .forgot:hover {
   color: #1ba0a9;
 }
+

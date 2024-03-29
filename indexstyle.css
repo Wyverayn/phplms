@@ -78,7 +78,7 @@ button {
     font-family: plushfont;
     display: flex;
     flex-direction: column;
-    height: 2600px;
+    height: 2000px;
     background-color: #1f2833;
     margin-left: 128px;
     margin-right: 128px;
@@ -91,6 +91,14 @@ button {
 } */
 .container{
     display: flex;
+}
+
+.navbar-collapse{
+    background-color: #0b0c10;
+  
+}
+.navbar ul{
+    margin-left: 30px;
 }
 
 .title{
@@ -114,11 +122,17 @@ button {
 .navbar a{
     color: #c5c6c7;
     border-radius: 25px;
-    font-size: 15px;
+    font-size: 16px;
     width: 80px;
     height: 40px;
-   padding-left: 18px !important; 
+    padding-left: 18px !important; 
+    margin-right: 8px;
+}
 
+.nav-feed a{
+    border-radius: 25px;
+    width: 100px;
+    height: 40px;
 }
 
  .navbar a:hover{
@@ -129,6 +143,7 @@ button {
 
 
 .welcome-text{
+    margin-top: 80px;
     display: flex;
     
     align-items: center;
