@@ -9,6 +9,18 @@
 </head>
 <div class="header">
     <h2 class="btn">USER</h2>
+    
+  <div class="logoutbtn">
+   <script>
+      function confirmLogout() {
+        if (confirm("Tapos nani sir? Ilog out nani?")) {
+          window.location = "index.php";
+        }
+      }
+    </script>
+
+    <button onclick="confirmLogout()" class="btn">LOG OUT</button>
+    </div>
 </div>
 <body>
   <div class="upperbody">
