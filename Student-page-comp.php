@@ -46,25 +46,29 @@
       <div class="des-test">
         
 
-        <?php
-        include "libri_dbcon.php";
-        $search_string = $_POST['search-string'];
-        $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'comp' AND `pdf-code` LIKE '$search_string%'";
-        $display = $conn->query($pdf);
+      
+      <?php
+      include "libri_dbcon.php";
 
-        if ($display->num_rows > 0) {
-          if($search_string != NULL) {
-            echo "<h2>Uploaded Files:</h2>";
-            echo "<ul>";
-            while ($row = $display->fetch_assoc()) {
-              $filename = $row["pdf-name"];
-              echo "<li>
-                <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
-                </li>";
-            }
-              echo "</ul>";
+      $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'comp'";
+      $display = $conn->query($pdf);
+      $search_string = NULL;
+
+      if ($display->num_rows > 0) {
+        if(isset($_POST['search-string']) && !empty(trim($_POST['search-string']))) {
+          $search_string = $_POST['search-string'];
+          $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'comp' AND `pdf-code` LIKE '$search_string%'";
+          $display = $conn->query($pdf);
+          echo "<h2>Uploaded Files:</h2>";
+          echo "<ul>";
+          while ($row = $display->fetch_assoc()) {
+            $filename = $row["pdf-name"];
+            echo "<li>
+              <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+            </li>";
+          }
+          echo "</ul>";
           } else {
-            $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'comp'";
             echo "<h2>Uploaded Files:</h2>";
             echo "<ul>";
             while ($row = $display->fetch_assoc()) {
@@ -73,16 +77,12 @@
                 <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
               </li>";
             }
-              echo "</ul>";
+            echo "</ul>";
           }
         } else {
           echo "No files uploaded";
         }
-        ?>
-
-        <!-- end -->
-         
-        
+      ?>   
 
       </div>
     </div> 
