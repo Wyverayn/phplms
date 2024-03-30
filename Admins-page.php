@@ -79,15 +79,15 @@
           </div>
               </form>
           </div>
-          </div>
+          
 
 
 
 
 
-              <div class="sidebar">
+              <!-- <div class="sidebar">
                 <h3>SHELVES</h3>
-                <div class="space"></div>
+                <div class="space"></div> -->
 
 
               <?php
@@ -240,15 +240,15 @@
 
 
 
-            </div>
-            </div>
-          </div> 
+            <!-- </div>
+            </div> -->
+          <!-- </div> 
             
           </div>
-            </div> 
+            </div>  -->
             <!-- end of table -->
 
-
+            </div>
     </div>
 
 
