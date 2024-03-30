@@ -108,7 +108,7 @@
         <div>
           <a href="Student-page-chem.php"><h4 class = "btn" >Chemistry</h4></a>
         </div>
-        <div class="space"></div>
+        <div class="space"></div> 
         <div>
           <a href="Student-page-gec.php"><h4 class = "btn" >General Education</h4></a>
         </div>

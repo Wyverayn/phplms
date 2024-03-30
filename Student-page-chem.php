@@ -127,6 +127,24 @@
 
 
 
+    <!-- added features -->
+
+    <div class="subfeatures">
+
+      <div class="discuss">
+        <label for="discussion">Need help from fellow students? Start a discussion!</label>
+        <input type="text" name="discussion" id="discussion" placeholder="Be polite and responsible.">
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
 </body>
 
 

@@ -106,7 +106,7 @@
               <label for="User_Level" class="form-label">Role</label>
               <select id="User_Level" name="User_Level" class="form-select" required>
                 <option value="" disabled selected>Select Role</option>
-                <option value= Teacher>Teacher</option>
+                <option value= Teacher>Admin</option>
                 <option value = Student>Student</option>
               </select>
             </div>
@@ -117,6 +117,7 @@
                         <option value="CpE1A">BSCpE-1A</option>
                         <option value="CpE2A">BSCpE-2A</option>
                         <option value="CpE3A">BSCpE-3A</option>
+                        <option value="Admin">Admin</option>
               </select>
             </div>
             <div class="reg d-grid gap-2">
