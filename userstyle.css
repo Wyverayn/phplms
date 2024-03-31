@@ -220,9 +220,11 @@ text-align: start;
 .tr-test {
     display: flex;
     flex-direction: row;
+
 }
 
 .td-test-image {
+    margin-left: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,24 +233,16 @@ text-align: start;
     border: solid black 1px;
     margin-bottom: 8px;
     background-image: url('img1.png');
+    background:linear-gradient(#45A29E, #1F2833);
+
 }
 
 .td-test-desc {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     height: 96px;
     width: 100vh;
     border: solid black 1px;
-}
-
-
-
-
-
-
-.subfeatures {
-  display: flex;
-  margin: 128px;
-  height: 64vh;
+    background:linear-gradient(#45A29E, #1F2833);
 }
