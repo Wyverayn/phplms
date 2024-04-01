@@ -62,24 +62,66 @@
             <div class="des-test">
             <table class="tab-des-test">
               <tbody>
-                <ul class="tr-test">
-                  <li class="td-test-image">
+                <tr class="tr-test">
+                  <td class="td-test-image">
                     Image
-                  </li>
-                  <li class="td-test-desc">
+                  </td>
+                  <td class="td-test-desc">
                     <a href="#">BOOK TITLE</a>
                     Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Download</button>
                     <button type="button" class="btn">Delete</button>
-                  </li>
-                </ul>
+                  <td>
+                 </tr>
+
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+
+                
 
                 
               </tbody>
             </table>
             
           </div>
-
 
           </div> 
 
