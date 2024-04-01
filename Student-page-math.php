@@ -139,6 +139,20 @@
 
 
 
+    <div class="subfeatures">
+
+      <div id="comments-container">
+        <h2>Discussion</h2>
+        <div id="discussions"></div>
+        <textarea id="discussion-text" placeholder="Start a discussion..."></textarea>
+        <button onclick="postDiscussion()">Post</button>
+      </div>
+      <script src="libri_comments.js"></script>
+
+    </div>
+
+
+
 </body>
 
 

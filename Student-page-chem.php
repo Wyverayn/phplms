@@ -139,21 +139,17 @@
 
 
 
-    <!-- added features -->
-
     <div class="subfeatures">
 
-      <div class="discuss">
-        <label for="discussion">Need help from fellow students? Start a discussion!</label>
-        <input type="text" name="discussion" id="discussion" placeholder="Be polite and responsible.">
-
+      <div id="comments-container">
+        <h2>Discussion</h2>
+        <div id="discussions"></div>
+        <textarea id="discussion-text" placeholder="Start a discussion..."></textarea>
+        <button onclick="postDiscussion()">Post</button>
       </div>
+      <script src="libri_comments.js"></script>
 
     </div>
-
-
-
-
 
 
 
