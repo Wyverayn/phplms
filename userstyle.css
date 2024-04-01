@@ -9,7 +9,7 @@
 .upperbody{
   align-items: center;
   text-align: center;
-  background-color: black;
+  background-color: #3f3f41;
   animation-name: upperbackground;
   animation-duration: 5s;
   height: 100px;
@@ -18,7 +18,7 @@
 
 @keyframes upperbackground {
   from {background-color: gray;}
-  to {background-color: black;}
+  to {background-color: #3f3f41;}
 }
 
 
@@ -73,10 +73,9 @@
 .body{
   /* margin-left: 128px;
   margin-right: 128px; */
-  border: solid black 1px;
   height: auto;
   overflow: hidden;
-  background-color:  #171718;
+  background-color:  #3f3f41;
 
 }
 .header{
@@ -117,11 +116,16 @@ margin-left: 5px;
 }
 
 .info{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-top: 0;
     justify-content: space-between;
     padding-top: 20px;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: auto;
+    border-radius: 20px;
     height: 300px;
     background:linear-gradient(#45A29E, #1F2833);
     /* background-image: url(bg7.jpg);
@@ -129,24 +133,29 @@ margin-left: 5px;
     background-repeat: no-repeat; */
     background-size: cover;
     color: white;
-    border: solid white;
+    box-shadow: 5px 5px  #15181f, 10px 10px  #15181f, 15px 15px  #15181f;
  
     
 }
 
   .main-content {
+
+    margin: 50px;
+    margin-right: 10px;
+    margin-top: 0px;
     align-items: center;
     text-align: center;
     background: linear-gradient(#1F2833,#1B1F22, #171718);
+    box-shadow: 5px 5px  #15181f, 10px 10px  #15181f, 15px 15px  #15181f;
     height: auto;
     float: left;
-    width: 1000px;
+    width: auto;
     padding-top: 50px;
     padding-right: 100px;
     padding-left: 100px;
     position: relative;
     color: white;
-    border: solid white;
+    border-radius: 20px;
     border-top: 0;
  
   }
@@ -156,14 +165,18 @@ margin-left: 5px;
   }
   .sidebar {
     width: auto;
-    height: 700px;
-    overflow-y: scroll;
+    height: auto;
+    margin: 50px;
+    margin-right: 50px;
+    margin-top: 0px;
     padding-top: 50px;
-    padding-left: 100px;
+    padding-left: 50px;
     align-items: center;
     background: linear-gradient(#1F2833,#1B1F22, #171718);
+    box-shadow: 5px 5px  #15181f, 10px 10px  #15181f, 15px 15px  #15181f;
     text-align: center;
     color: white;
+    border-radius: 20px;
   
   }
 
@@ -215,6 +228,8 @@ text-align: start;
     border-radius: 5px;
     padding-top: 20px;
 
+
+
 }
 
 .tr-test {
@@ -234,6 +249,8 @@ text-align: start;
     margin-bottom: 8px;
     background-image: url('img1.png');
     background:linear-gradient(#45A29E, #1F2833);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 
 }
 
@@ -245,4 +262,6 @@ text-align: start;
     width: 100vh;
     border: solid black 1px;
     background:linear-gradient(#45A29E, #1F2833);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
