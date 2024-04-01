@@ -49,12 +49,77 @@
 
     <div class="main-content"> 
       <h3>Main Content</h3> 
+
+     
+      
       <form method="post">
         <input type="text" name="search-string" placeholder="Search..." class="searchbar">
         <button type="submit">Submit</button>
       </form>
       <h3>BOOKS</h3>
+      <div class="des-test">
+            <table class="tab-des-test">
+              <tbody>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+
+                
+
+                
+              </tbody>
+            </table>
             
+          </div>
       <div class="des-test">
 
       <?php
@@ -97,6 +162,9 @@
       </div>
     </div>
 
+
+    
+
     <!-- sidebar part (shelves) -->
 
     <div class="sidebar"><h3>Sidebar</h3>
@@ -120,7 +188,7 @@
         <div>
           <a href="Student-page-chem.php"><h4 class = "btn" >Chemistry</h4></a>
         </div>
-        <div class="space"></div> 
+        <div class="space"></div>
         <div>
           <a href="Student-page-gec.php"><h4 class = "btn" >General Education</h4></a>
         </div>

@@ -59,7 +59,69 @@
 
             <!-- end  -->
 
+            <div class="des-test">
+            <table class="tab-des-test">
+              <tbody>
+                <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
 
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                    Image
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+
+                
+
+                
+              </tbody>
+            </table>
+            
+          </div>
 
           </div> 
 
