@@ -3,130 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>USER</title>
+    <title>Document</title>
     <link rel="stylesheet" href="userstyle.css">
+
 </head>
-<div class="header">
-    <h2 class="btn">USER</h2>
-    
-  <div class="logoutbtn">
-   <script>
-      function confirmLogout() {
-        if (confirm("Tapos nani sir? Ilog out nani?")) {
-          window.location = "index.php";
-        }
-      }
-    </script>
-
-    <button onclick="confirmLogout()" class="btn">LOG OUT</button>
-    </div>
-</div>
 <body>
-  <div class="upperbody">
-    <h1 class ="anim">LIBRI</h1>
-    <h2>WELCOME</h2>
-  </div>
-  <div class="body">
-         <!-- upperpart sang body ang may information -->
-    <div class="info">
-        <div><h4 class="text-center"><h2>Information</h2></h4></div>
-        <div class="about">
-                    <h5>Name:</h5>
-                    <h5>Level:</h5>
-                    <h5>Info:</h5>
-        </div>
-        <div class="gallery">
-                    <div class="imageItem1"></div>
-        </div>
 
+    <div class="header">
+        
     </div>
-         <div class="main-content"> <h3>BOOKS</h3> 
-         <input type="text" placeholder="Search..." class="searchbar">
 
-            
+    <div class="wholebody">
 
 
-            <!-- Temporary welcome message and basic instructions, pakiedit please.  -->
-            <!-- Pwede kamo di kabutang design design or someting like daw himuon ni siya nga student lounge, depende sa inyo -->
-
-            <div class="des-test">
-              Welcome to libri, "User". A school library in your device.
-              Looking for study materials? Please proceed to the shelves.
-              You may also use the search bar and use the code provided 
-              by your respective instructors or just search for the title of the book.
+        <div class="side-nav">
+            <div class="user">
+                <img src="images/Untitled1.png" class="user-img">
+                <div>
+                    <h2>Random</h2>
+                    <p>USER</p>
+                </div>
+                <img src="images/star.png" class="star-img">
             </div>
+            <ul>
+                <li><img src="images/dashboard.png"><a href="#">More</li>
+                <li><img src="images/reports.png"><a href="#">Profile</a></li>
+                <li><img src="images/messages.png"><a href="#">Feedback</a></li>
+                <li><img src="images/projects.png"><a href="#">About</a></li>
+                <li><img src="images/members.png"><button onclick = "hideShow()">Discussions</button></a></li>
+                <li><img src="images/setting.png"><a href="#">Settings</a></li>
+            </ul>
 
-            <!-- end  -->
-
-            <div class="des-test">
-            <table class="tab-des-test">
-              <tbody>
-                <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    <a href="#">BOOK TITLE</a>
-                    Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Delete</button>
-                  <td>
-                 </tr>
-
-                 <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    <a href="#">BOOK TITLE</a>
-                    Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Delete</button>
-                  <td>
-                 </tr>
-
-                 <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    <a href="#">BOOK TITLE</a>
-                    Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Delete</button>
-                  <td>
-                 </tr>
-                 <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    <a href="#">BOOK TITLE</a>
-                    Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Delete</button>
-                  <td>
-                 </tr>
-                 <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    <a href="#">BOOK TITLE</a>
-                    Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Delete</button>
-                  <td>
-                 </tr>
-
+            <ul>
+                <li><img src="images/logout.png">
                 
-
+                    <div class="logoutbtn">
+                        <script>
+                           function confirmLogout() {
+                             if (confirm("Tapos nani sir? Ilog out nani?")) {
+                               window.location = "index.php";
+                             }
+                           }
+                         </script>
+                     
+                         <button onclick="confirmLogout()" class="btn">Log Out</button>
+                         </div>
                 
-              </tbody>
-            </table>
+                </li>
+            </ul>
+
+            <div id = "main" class="main">
+                <script src ="hiddencategories.js"></script>
+                <div class="subfeatures">
+
+                    <div id="comments-container">
+                    <h2>Discussion</h2>
+                    <div id="discussions"></div>
+                    <textarea id="discussion-text" placeholder="Start a discussion..."></textarea>
+                    <button onclick="postDiscussion()">Post</button>
+                    </div>
+                    <script src="libri_comments.js"></script>
+                
+                    </div>
+                
             
-          </div>
+            </div> 
 
-          </div> 
+            
+        </div>
 
-            <div class="sidebar"><h3>SHELVES</h3>
-             <div class="space"></div>
+        <div class="upper">
+            <div class="words">
+            <h6>LIBRI</h6>
+            <h4>explore, learn, succeed.</h4>
+            <input type="text" placeholder="Enter book title" class="searchbar" size="70px">
+
+        </div>
+         </div>
+
+
+        <div class="lower">
+            <div class="books">
+               
+            </div>
+    
+            <div class="category">
+                SHELVES
+                <div class="space"></div>
                 <div>
                     <a href="Student-page-math.php"><h4 class="btn">Mathematics</h4></a>
                 </div>
@@ -160,11 +123,11 @@
                 </div>
             </div>
 
-    </div>
+            </div>
+        </div>
+    </div> 
 
-
-
-    <div class="subfeatures">
+    <disv class="subfeatures">
 
     <div class="discussion-container" id="discussion-container">
       <h2>Discussion</h2>
@@ -180,19 +143,6 @@
     </div>
 
 
-</body>
 
-<footer>
-    <div class="footerdes">
-        <div>
-            <thead>
-                <tr>
-                    <th><h6>contact</h6></th>
-                    <th><h6>feedback</h6></th>
-                    <th><h6>more</h6></th>
-                </tr>
-            </thead>
-        </div>
-        </div>
-</footer>
+</body>
 </html>
