@@ -18,14 +18,17 @@ function renderDiscussions() {
         discussionDiv.classList.add('discussion');
         discussionDiv.textContent = discussionText;
 
-
-
         const deleteBtn = document.createElement('button');
         deleteBtn.classList.add('delete-btn');
         deleteBtn.textContent = 'Delete Post';
         deleteBtn.onclick = function() {
             deleteDiscussion(index);
         };
+
+        const userName = document.createElement('div');
+        userName.classList.add('txt-username');
+        userName.textContent = ''
+
 
         discussionDiv.appendChild(deleteBtn);
         discussionsList.appendChild(discussionDiv);
