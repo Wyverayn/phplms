@@ -86,7 +86,7 @@
 
         <div class="lower">
             <div class="books">
-               
+                <h4>"Welcome to LIBRI. Click on the categories to get started." </h4>
             </div>
     
             <div class="category">
