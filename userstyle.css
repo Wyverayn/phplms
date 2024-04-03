@@ -378,14 +378,14 @@ ul li button{
   background-color: gray;
   /* border-top-right-radius: 10px;
   border-bottom-right-radius: 10px; */
-} */
+} 
 
 .subfeatures {
   display: flex;
   margin-right: 144px;
   margin-left: 144px;
   color: aliceblue;
-  background-color: #04263d;
+  background-color: blue;
   padding: 16px;
   justify-content: flex-start;
   align-items: flex-start;
