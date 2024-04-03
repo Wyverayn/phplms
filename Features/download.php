@@ -20,7 +20,7 @@ if(!empty($_GET["file"])) {
         header("Content-Type: application/pdf");
         header("Content-Transfer-Encoding: binary");
 
-        readfile($filename);
+        readfile($filepath);
         exit();
     } else {
         echo $filename;
