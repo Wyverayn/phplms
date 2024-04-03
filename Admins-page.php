@@ -26,11 +26,11 @@
                 <img src="images/star.png" class="star-img">
             </div>
             <ul>
-                <li><img src="images/dashboard.png"><a href="#">More</li>
+               <li><img src="images/dashboard.png"><a href="Admins-page.php">Home</li>
                 <li><img src="images/reports.png"><a href="#">Profile</a></li>
                 <li><img src="images/messages.png"><a href="tempfeedback/mainpage.php">Feedback</a></li>
                 <li><img src="images/projects.png"><a href="#">About</a></li>
-                <li><img src="images/members.png"><button onclick = "hideShow()">Discussions</button></a></li>
+                <li><img src="images/members.png"><a href="Discussions-page.php">Discussions</a></li>
                 <li><img src="images/setting.png"><a href="#">Settings</a></li>
             </ul>
 
@@ -302,21 +302,6 @@
             </div>
         </div>
     </div> 
-
-    <disv class="subfeatures">
-
-    <div class="discussion-container" id="discussion-container">
-      <h2>Discussion</h2>
-      <div class="disc-txtarea">
-        <textarea id="discussion-text" placeholder="Start a discussion..." rows="8" cols="80  "></textarea>
-      </div>
-      <button onclick="postDiscussion()">Post</button>
-      <div class="discussion-content" id="discussions"></div>
-    </div>
-
-    <script src="libri_comments.js"></script>
-
-    </div>
 
 
 
