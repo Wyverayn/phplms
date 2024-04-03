@@ -803,18 +803,24 @@ min-height: 50px;
 width: 600px;
 border-radius: 5px;
 padding-top: 20px;
+margin-left: 40px;
 
 
 
+}
+
+.des-test a{
+  color: black;
 }
 
 .tr-test {
 display: flex;
 flex-direction: row;
+margin-top: 20px;
 
 }
 
-.td-test-image {
+/* .td-test-image {
 display: flex;
 justify-content: center;
 align-items: center;
@@ -828,7 +834,6 @@ background-image: url('img1.png');
 /* border-top-left-radius: 10px;
 border-bottom-left-radius: 10px; */
 
-}
 
 .td-test-desc {
 display: grid;
@@ -837,7 +842,7 @@ align-items: center;
 height: 70px;
 width: 500px;
 border: solid black 1px;
-background-color: gray;
+background-color: #EDDDCD;
 /* border-top-right-radius: 10px;
 border-bottom-right-radius: 10px; */
 } 
