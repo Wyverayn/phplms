@@ -89,7 +89,6 @@
               <tbody>
                 <tr class="tr-test">
                   <td class="td-test-image">
-                    Image
                   </td>
                   <td class="td-test-desc">
                     <a href="#">BOOK TITLE</a>
@@ -100,7 +99,6 @@
 
                  <tr class="tr-test">
                   <td class="td-test-image">
-                    Image
                   </td>
                   <td class="td-test-desc">
                     <a href="#">BOOK TITLE</a>
@@ -111,7 +109,6 @@
 
                  <tr class="tr-test">
                   <td class="td-test-image">
-                    Image
                   </td>
                   <td class="td-test-desc">
                     <a href="#">BOOK TITLE</a>
@@ -121,7 +118,6 @@
                  </tr>
                  <tr class="tr-test">
                   <td class="td-test-image">
-                    Image
                   </td>
                   <td class="td-test-desc">
                     <a href="#">BOOK TITLE</a>
@@ -131,7 +127,6 @@
                  </tr>
                  <tr class="tr-test">
                   <td class="td-test-image">
-                    Image
                   </td>
                   <td class="td-test-desc">
                     <a href="#">BOOK TITLE</a>
