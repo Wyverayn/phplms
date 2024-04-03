@@ -28,7 +28,7 @@
             <ul>
                 <li><img src="images/dashboard.png"><a href="Student-page.php">Home</li>
                 <li><img src="images/reports.png"><a href="#">Profile</a></li>
-                <li><img src="images/messages.png"><a href="#">Feedback</a></li>
+                <li><img src="images/messages.png"><a href="tempfeedback/feedbackmainpage.php">Feedback</a></li>
                 <li><img src="images/projects.png"><a href="#">About</a></li>
                 <li><img src="images/members.png"><button onclick = "hideShow()">Discussions</button></a></li>
                 <li><img src="images/setting.png"><a href="#">Settings</a></li>

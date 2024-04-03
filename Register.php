@@ -46,14 +46,14 @@
               <label for="idno" class="form-label">ID Number</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="fas fa-user"></i></span>
-                <input type="text" placeholder="ID Number" id="idno" name="idnumber" class="form-control" required>
+                <input type="text" placeholder="ID Number" id="idnumber" name="idnumber" class="form-control" required>
               </div>
             </div>
             <div class="mb-3">
               <label for="fn" class="form-label">First Name</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="fas fa-user"></i></span>
-                <input type="text" placeholder="First Name" id="fn" name="first" class="form-control" required>
+                <input type="text" placeholder="First Name" id="first" name="first" class="form-control" required>
               </div>
             </div>
             <div class="mb-3">
@@ -67,14 +67,14 @@
               <label for="ln" class="form-label">Last Name</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="fas fa-user"></i></span>
-                <input type="text" placeholder="Last Name" id="ln" name="last" class="form-control" required>
+                <input type="text" placeholder="Last Name" id="last" name="last" class="form-control" required>
               </div>
             </div>
             <div class="mb-3">
               <label for="dob" class="form-label">Date of Birth</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="fas fa-calendar"></i></span>
-                <input type="date" id="dob" name="birth" class="form-control" required>
+                <input type="date" id="dirth" name="birth" class="form-control" required>
               </div>
             </div>
             <div class="mb-3">
@@ -90,7 +90,7 @@
               <label for="password" class="form-label">Password</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                <input type="password" id="password" name="pass" class="form-control" required>
+                <input type="password" id="pass" name="pass" class="form-control" required>
               </div>
             </div>
 
@@ -106,8 +106,8 @@
               <label for="User_Level" class="form-label">Role</label>
               <select id="User_Level" name="User_Level" class="form-select" required>
                 <option value="" disabled selected>Select Role</option>
-                <option value= Teacher>Teacher</option>
-                <option value = Student>Student</option>
+                <option value= "Teacher">Teacher</option>
+                <option value = "Student">Student</option>
               </select>
             </div>
             <div class="mb-3">
@@ -121,7 +121,7 @@
               </select>
             </div>
             <div class="reg d-grid gap-2">
-              <button type="submit" class="btn btn-primary">Register</button>
+              <input type="submit" value="Register" name="submit" class="btn btn-primary">
             </div>
           </form>
         </div>

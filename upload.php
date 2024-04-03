@@ -16,7 +16,8 @@ if(isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] == 0) {
 
         $sql = "INSERT INTO `pdf-files` (`pdf-name`, `pdf-sub`, `pdf-code`) VALUES ('$fileName', '$sub', '$code')";
         if($conn->query($sql) == true) {
-            echo "File uploaded and saved to Database";
+            $message = "File uploaded and saved to Database";
+            header('location: Admins-Page.php?notif='.$message);
         }
         else {
             echo "Error: ".$sql." Error Details: ".$conn->error;

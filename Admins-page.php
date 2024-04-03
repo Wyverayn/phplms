@@ -97,7 +97,7 @@
                   <option value="phys">Physics</option>
                   <option value="elex">Electrical/Electronics</option>
                   <option value="comp">Computer Studies</option>
-                  <option value="comp">Chemistry</option>
+                  <option value="chem">Chemistry</option>
                   <option value="gec">General Education</option>
                   <option value="ent">Entertainment/Literatures</option>
                   <option value="misc">Miscellaneous</option>

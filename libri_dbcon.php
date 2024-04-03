@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "libri_db";
+$dbname = "libri_finalfb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
