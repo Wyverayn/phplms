@@ -127,7 +127,6 @@
         </div>
     </div> 
 
-<<<<<<< HEAD
 
 
 
@@ -142,9 +141,6 @@
         <div class="disc-txtarea">
           <textarea id="discussion-text" placeholder="Start a discussion..." rows="8" cols="82"></textarea>
         </div>
-=======
-    <disv class="subfeatures">
->>>>>>> 50ababd4ccf1dd077dc6b8c061ce44a56440d3b1
 
         <div class="btn-post-container">
           <button class="btn-post" onclick="postDiscussion()">Post</button>
