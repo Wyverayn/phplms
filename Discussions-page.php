@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USER</title>
-    <link rel="stylesheet" href="userstyle.css">
+    <link rel="stylesheet" href="discussionsstyle.css">
 
 </head>
 <body>
@@ -28,7 +28,7 @@
             <ul>
                 <li><img src="images/dashboard.png"><a href="Student-page.php">Home</li>
                 <li><img src="images/reports.png"><a href="#">Profile</a></li>
-                <li><img src="images/messages.png"><a href="tempfeedback/feedbackmainpage.php">Feedback</a></li>
+                <li><img src="images/messages.png"><a href="#">Feedback</a></li>
                 <li><img src="images/projects.png"><a href="#">About</a></li>
                 <li><img src="images/members.png"><a href="Discussions-page.php">Discussions</a></li>
                 <li><img src="images/setting.png"><a href="#">Settings</a></li>
@@ -78,66 +78,8 @@
             <div class="words">
             <h6>LIBRI</h6>
             <h4>explore, learn, succeed.</h4>
-            <input type="text" placeholder="Enter book title" class="searchbar" size="70px">
 
-        </div>
-         </div>
-
-
-        <div class="lower">
-            <div class="books">
-                <h4>"Welcome to LIBRI. Click on the categories to get started." </h4>
-            </div>
-    
-            <div class="category">
-                SHELVES
-                <div class="space"></div>
-                <div>
-                    <a href="Student-page-math.php"><h4 class="btn">Mathematics</h4></a>
-                </div>
-                <div class="space"></div>
-                <div>
-                    <a href="Student-page-phys.php"><h4 class="btn">Physics</h4></a>
-                </div>
-                <div class="space"></div>
-                <div>
-                    <a href="Student-page-elex.php"><h4 class = "btn">Electrical/Electronics</h4></a>
-                </div>
-                <div class="space"></div>
-                <div>
-                    <a href="Student-page-comp.php"><h4 class = "btn" >Computer Studies</h4></a>
-                </div>
-                <div class="space"></div>
-                <div>
-                    <a href="Student-page-chem.php"><h4 class = "btn" >Chemistry</h4></a>
-                </div>
-                <div class="space"></div>
-                <div>
-                    <a href="Student-page-gec.php"><h4 class = "btn" >General Education</h4></a>
-                </div>
-                <div class="space"></div>
-                <div>
-                    <a href="Student-page-ent.php"><h4 class = "btn" >Entertainment/Literature</h4></a>
-                </div>
-                <div class="space"></div>
-                <div>
-                    <a href="Student-page-misc.php"><h4 class = "btn" >Miscellaneous</h4></a>
-                </div>
-            </div>
-
-            </div>
-        </div>
-    </div> 
-
-
-
-
-
-
-
-
-
-    <!-- <div class="subfeatures">
+            <div class="subfeatures">
       <div class="discussion-container" id="discussion-container">
         <h2>Discussion</h2>
         <div class="disc-txtarea">
@@ -154,7 +96,19 @@
       </div>
 
       <script src="libri_comments.js"></script>
-    </div> -->
+    </div>
+        </div>
+         </div>
+
+
+
+
+
+
+
+
+
+   
 
 </body>
 </html>

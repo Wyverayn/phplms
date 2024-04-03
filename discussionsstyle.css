@@ -561,7 +561,7 @@ margin-left: 1050px;
 
 .upper{
 width: 100%;
-height: 60%;
+height: 100%;
 background:linear-gradient(rgb(236, 232, 230), #B89869);
 
 }
@@ -803,24 +803,18 @@ min-height: 50px;
 width: 600px;
 border-radius: 5px;
 padding-top: 20px;
-margin-left: 40px;
 
 
 
-}
-
-.des-test a{
-  color: black;
 }
 
 .tr-test {
 display: flex;
 flex-direction: row;
-margin-top: 20px;
 
 }
 
-/* .td-test-image {
+.td-test-image {
 display: flex;
 justify-content: center;
 align-items: center;
@@ -834,6 +828,7 @@ background-image: url('img1.png');
 /* border-top-left-radius: 10px;
 border-bottom-left-radius: 10px; */
 
+}
 
 .td-test-desc {
 display: grid;
@@ -841,30 +836,30 @@ justify-content: center;
 align-items: center;
 height: 70px;
 width: 500px;
-border: solid black 1px;
-background-color: #EDDDCD;
+border: solid black 2px;
+background-color: gray;
 /* border-top-right-radius: 10px;
 border-bottom-right-radius: 10px; */
 } 
 
 .subfeatures {
 display: flex;
-color: black;
+color: white;
 background-color: light gray;
 padding-left: 50px;
 justify-content: center;
-align-items: center;
-height: 96vh;
-border: solid gray 1px;
+height: 500px;
 }
 
 .discussion-container {
 display: flex;
+margin-top: 20px;
 flex-direction: column;
 padding: 8px;
-height: 84vh;
+height: 450px;
 width:96vh;
-border: solid gray 1px;
+border: solid black 1px;
+background-color: #B89869;
 }
 
 .disc-txtarea {
@@ -880,7 +875,7 @@ border: solid black 4px;
 .discussion {
 display: flex;
 justify-content: space-between;
-border: solid grey 1px;
+border: solid black 1px;
 min-height: 12vh;
 width: 100%;
 margin-bottom: 4px;

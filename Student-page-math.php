@@ -101,16 +101,60 @@ include "libri_dbcon.php";
                  ?>
                 <tr class="tr-test">
                   <td class="td-test-image">
-                    Image
                   </td>
                   <td class="td-test-desc">
                   <a href="uploads/<?php echo $row['pdf-name'] ?>" target="_blank"><?php echo $row['pdf-name'] ?></a>
                   <td>
                  </tr>
+<<<<<<< HEAD
                   <?php 
                   }
                 }
                   ?>
+=======
+
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+                 <tr class="tr-test">
+                  <td class="td-test-image">
+                  </td>
+                  <td class="td-test-desc">
+                    <a href="#">BOOK TITLE</a>
+                    Descriptions, aaaaaupload, and download
+                    <button type="button" class="btn">Delete</button>
+                  <td>
+                 </tr>
+
+                
+
+                
+>>>>>>> 6b9b23ff4d41a701ed6bdfef070b99057f29f97d
               </tbody>
             </table>
             
