@@ -389,13 +389,11 @@ ul li button{
 
 .subfeatures {
   display: flex;
-  margin-right: 144px;
-  margin-left: 144px;
-  color: aliceblue;
-  background-color: blue;
-  padding: 16px;
-  justify-content: flex-start;
-  align-items: flex-start;
+  color: black;
+  background-color: light gray;
+  padding-left: 50px;
+  justify-content: center;
+  align-items: center;
   height: 96vh;
   border: solid gray 1px;
 }
