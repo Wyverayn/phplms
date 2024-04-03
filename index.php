@@ -32,9 +32,9 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link " aria-current="page" href="index.php">Home</a>
-                                </li>
+                                </li> -->
                                 <li class="nav-feed">
                                     <a class="nav-link" aria-current="page" href="tempfeedback/feedbackmainpage.php">Feedback</a>
                                 </li>
@@ -58,7 +58,7 @@
         class = "welcome-text" >
         <h4>UNLOCK KNOWLEDGE</h4>
         <p>Explore, Learn, Succeed</p>
-        <img src="images/Untitled116_20240319221135.png">
+        <img src="images/logo-brown.png">
     </section>
          
     <section id = "login"
@@ -103,46 +103,6 @@
 
 
     <br><br><br>
-    <!-- <section id="feedback"
-            div class="box mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title text-center mb-4">Feedback Form</h3>
-            <form id="feedbackForm">
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-              </div>
-              <div class="mb-3">
-                <label for="rating" class="form-label">Rating</label>
-                <select class="form-select" id="rating" name="rating" required>
-                  <option value="">Select Rating</option>
-                  <option value="1">1 Star</option>
-                  <option value="2">2 Stars</option>
-                  <option value="3">3 Stars</option>
-                  <option value="4">4 Stars</option>
-                  <option value="5">5 Stars</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label for="comments" class="form-label">Comments</label>
-                <textarea class="form-control" id="comments" name="comments" rows="3" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane me-2"></i>Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-          </section> -->
-
 
     <section id = "about" 
             class = "d-flex justify-content-center
@@ -150,7 +110,7 @@
     <div class="card mb-3 card-1">
 			  <div class="row g-0">
 			    <div class="col-md-4">
-			      <img src="images/Untitled116_20240319221135.png"  width = "220" >
+			      <img src="images/logo-brown.png"  width = "220" >
 			    </div>
 			    <div class="col-md-8">
 			      <div class="card-body">

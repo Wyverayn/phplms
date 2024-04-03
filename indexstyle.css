@@ -4,12 +4,6 @@
 }
  
 /* --------- */
-:root {
-    --btn:#4C5FD5;
-    --contentblack:black;
-    --background:#dadbf1;
-    --contentwhite:#fff;
-}
 * {
     padding: 0;
     margin:0;
@@ -22,7 +16,7 @@
     height: 64px;
     padding:0 86px;
     background-color: var(--contentblack);
-    color: var(--contentwhite);
+    color: var(--contentblack);
     font-family: plushfont;
 }
 
@@ -40,38 +34,6 @@ button {
     padding:4px 24px;
 }
 
-/* -------- */
-
-
-.butbar{
-    width: auto;
-    height: 65px;
-    margin-top: 15px;
-    display: flex;
-    border-radius: 50px;
-    padding-top: 7px;
-    padding-left: 8px ;
-    
-}
-
-.active {
-    background: orangered;
-}
-
-.butbar button{
-    font-size: 15px;
-    border-radius: 50px;
-    padding: 8px 20px;
-    border: transparent;
-    background-color: black;
-    color: white;
-    transition-duration: 0.4s;
-    font-weight: bold;
-    font-family: plushfont;
-    margin-right: 10px;
-}
-
-/* ------------ */
 
 
 .body-home{
@@ -79,22 +41,16 @@ button {
     display: flex;
     flex-direction: column;
     height: 2000px;
-    background-color: #1f2833;
-    margin-left: 128px;
-    margin-right: 128px;
-    border-right: solid #c5c6c7 3px;
-    border-left: solid #c5c6c7 3px;
+    background-image: linear-gradient(to bottom, white, #9e825a);
+
 }  
-/* 
-.black-fill{
-    background-color: linear-gradient( right,  #28225c, #e8f2fa) !important;
-} */
+
 .container{
     display: flex;
 }
 
 .navbar-collapse{
-    background-color: #0b0c10;
+    background-color: #9e825a;
   
 }
 .navbar ul{
@@ -106,21 +62,23 @@ button {
     padding-right: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
-    background-color: #0b0c10;
+    background-color: #9e825a;
     font-family: plushfont;
-    color: #c5c6c7;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), -8px 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .navbar {
     font-family: plushfont;
-    background-color: #0b0c10;
+    background-color: #9e825a;
     width: 100%;
     height: 70px;
     margin:0 auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px -5px rgba(0, 0, 0, 0.2), 8px 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .navbar a{
-    color: #c5c6c7;
+    color: white;
     border-radius: 25px;
     font-size: 16px;
     width: 80px;
@@ -136,8 +94,8 @@ button {
 }
 
  .navbar a:hover{
-    background-color: #1f2833;
-    color: white;
+    background-color: white;
+    color: #9e825a;
     transition: 0.4s;
 } 
 
@@ -145,9 +103,8 @@ button {
 .welcome-text{
     margin-top: 80px;
     display: flex;
-    
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     min-height: 80vh;
     border-radius: 10px;
     padding: 10px;
@@ -158,33 +115,40 @@ button {
 }
 
 .welcome-text h4{
-    color: #45a29e;
-    border-bottom: solid grey 2px;
+    color: #9e825a;
+    border-bottom: #b89869 solid 2px;
     font-size: 60px;
     font-family: plushfont;
     font-weight: bold;
     margin-top: 50px;
+    
 }
 
 .welcome-text p{
-    color: #c5c6c7;
+    color: #d2ad79;
     padding: 5px;
     font-family: plushfont;
     font-weight: bold;
     font-size: 40px;
+    
 }
 
 #about{
     min-height: 100vh;
 }
+
+.card-text p{
+    color: #9e825a;
+}
 #about .card-1{
     min-width: 600px;
     width: 50%;
-    background: rgba(#c5c6c7,0.5);
-    /* padding: 20px; */
+    background: white;
+    border-color: #9e825a;
+    
 }
 .card-title h5{
-    color: #1f2833;
+    color: #9e825a;
 }
 
 .col-md-4 img{
@@ -194,7 +158,7 @@ button {
 
 .copyright-text{
     text-align: center;
-    color: #c5c6c7;
+    color: white;
 }
 .Title {
     text-align:center;
@@ -204,23 +168,31 @@ button {
     max-width: 400px;
     margin: auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 3px solid #9e825a;
     border-radius: 5px;
     margin-top: 50px;
-    color: #c5c6c7;
+    color: #9e825a;
   }
   .login-container h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #c5c6c7;
+    color: #9e825a;
   }
   .login-container a{
-    color: white;
+    color: #9e825a;
   }
 
-  .btn {
-    background-color: #45a29e;
-  }
+  .btn.btn-primary {
+    background-color: #9e825a;
+    border-color: #b89869;
+    transition-duration: 0.4s;
+}
+
+.btn.btn-primary:hover {
+    background-color: #b89869;
+    color: white;
+    border-color: #b89869;
+}
 
   #feedback{
     align-content: center;

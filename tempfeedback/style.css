@@ -29,7 +29,7 @@ img{max-width:100%;}
 /*--end reset--*/
 @font-face {
     font-family: plushfont;
-    src: url(images/plushblack.otf);
+    src: url(../images/plushblack.otf);
 }
 body {
 	margin:0;
@@ -78,20 +78,21 @@ ul{
 	 
 	background-size: auto;
 	background-attachment: fixed;
-	background-color: #1f2833 !important;
+	background-color: #9e825a !important;
 }
 .wrap {
     padding: 2.3em;
     width: 37%;
     margin: 2em auto;
     background: rgba(1, 14, 21, 0.62);
-	border: solid grey 5px;
+	border-color: #d2ad79;
+	border-style: solid 5px;
 }
 h1.agile_head {
 	padding-top: 1em;
 	font-size: 2.5em;
 	text-transform: uppercase;
-	color: #fff;
+	color: white;
 	font-weight: bolder;
 	font-family: plushfont;
 	letter-spacing: 6px;
@@ -105,7 +106,7 @@ h1.agile_head {
 }
 .agile_form h2 {
 	font-size: 0.9em;
-    color:#1ec8e9;
+    color:white;
     margin: 1em 0;
 	line-height: 1.5;
   }

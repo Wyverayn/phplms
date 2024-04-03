@@ -9,7 +9,7 @@
 }
 
 .body{
-    background-color: #1f2833;
+    background-color: #9e825a;
     height: 1900px;
     
 }
@@ -24,7 +24,7 @@
 }
 
 .blue-streak{
-    background-color: #45a29e;
+    background-color: #d2ad79;
     height: 1150px;
     width: 50px;
     margin-top: 30px;
@@ -45,14 +45,14 @@
     font-weight: bolder;
     margin-left: 0px;
     
-    color: #c5c6c7;
+    color: white;
 }
 
 .quote img{
     margin-left: 0;
 }
 .sign{
-    background-color: #45a29e;
+    background-color: #d2ad79;
     height: 1150px;
     width: 600px;
     padding-left: 80px;
@@ -60,15 +60,27 @@
     margin-top: 30px;
     margin-right: 20px;
     font-family: plushfont;
+    border-color: #9e825a;
 }
 .container{
     width: 900px !important;
     
 }
 
+.btn.btn-primary{
+    border-color: #9e825a;
+}
+
+.btn.btn-primary:hover{
+    border-color: #9e825a;
+    transition-duration: 0.4s;
+    background-color: #d2ad79;
+    color: white;
+}
+
 .box table{
     width: 700px;
-    margin-left: -400px; 
+    margin-left: -600px; 
 }
 
 .box th,td{
@@ -76,14 +88,14 @@
 }
 
 .box th{
-    background-color: #45a29e;
+    background-color: #d2ad79;
     color: white;
     font-family: plushfont;
 }
 
 .back a{
     color: #c5c6c7;
-    background-color: #1f2833;
+    background-color: #9e825a;
     border-radius: 25px;
     font-size: 15px;
     width: 90px;
@@ -95,10 +107,10 @@
 }
 
  .back a:hover{
-    background-color: #45a29e;
+    background-color: #d2ad79;
     color: white;
     transition: 0.4s;
 } 
 .reg button{
-    background-color: #1f2833;
+    background-color: #9e825a;
 }

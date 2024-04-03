@@ -25,7 +25,7 @@
             
             <p>&#8706;&#8706;</p>
             <p>Explore, Learn, <br>Succeed</p>
-            <img src="images/Untitled116_20240319221135.png" width="110">
+            <img src="images/logo-white.png" width="210">
         </div>
         </div>
 
@@ -95,18 +95,18 @@
             </div>
 
             <!-- Added confirm pass design -->
-            <div class="mb-3">
+            <!-- <div class="mb-3">
               <label for="confirmPassword" class="form-label">Confirm Password</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="fas fa-lock"></i></span>
                 <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
               </div>
-            </div>
+            </div> -->
             <div class="mb-3">
               <label for="User_Level" class="form-label">Role</label>
               <select id="User_Level" name="User_Level" class="form-select" required>
                 <option value="" disabled selected>Select Role</option>
-                <option value= Teacher>Admin</option>
+                <option value= Teacher>Teacher</option>
                 <option value = Student>Student</option>
               </select>
             </div>
@@ -152,7 +152,7 @@
         </thead>
         <tbody>
           <?php
-            $sql = "SELECT * FROM users ORDER BY lastname";
+            $sql = "SELECT * FROM accounts ORDER BY lastname";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -165,9 +165,9 @@
                   <td><?php echo $row['mi'] ?></td>
                   <td><?php echo $row['birthdate'] ?></td>
                   <td>
-                    <?php if ($row['role'] == 'teacher') : ?>
+                    <?php if ($row['user_role'] == 'Teacher') : ?>
                       <i class="fas fa-chalkboard-teacher"></i> Teacher
-                    <?php elseif ($row['role'] == 'student') : ?>
+                    <?php elseif ($row['user_role'] == 'Student') : ?>
                       <i class="fas fa-user-graduate"></i> Student
                     <?php endif; ?>
                   </td>

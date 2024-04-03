@@ -75,7 +75,7 @@
         <div class="upper">
             <div class="words">
             <h6>LIBRI</h6>
-            <h4>explore, learn, succeed.</h4>
+            <h4>Explore, Learn, Succeed.</h4>
             <input type="text" placeholder="Enter book title" class="searchbar" size="70px">
 
         </div>
