@@ -328,7 +328,7 @@ ul li button{
   align-items: flex-start;
   border-radius: 5px;
   padding-top: 100px;
-  padding-left: 150px;
+  padding-left: 90px;
 
 
 
@@ -337,8 +337,8 @@ ul li button{
 .des-test {
   display: flex;
   align-items: flex-start;
-  min-height: 96vh;
-  width: 128vh;
+  min-height: 50px;
+  width: 600px;
   border-radius: 5px;
   padding-top: 20px;
 
@@ -351,20 +351,20 @@ ul li button{
   flex-direction: row;
 
 }
-/* 
+
 .td-test-image {
-  margin-left: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 96px;
-  width: 96px;
+  height: 70px;
+  width: 70px;
   border: solid black 1px;
   margin-bottom: 8px;
+  background-color: gray;
   background-image: url('img1.png');
-  background:linear-gradient(#45A29E, #1F2833);
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  /* background:linear-gradient(rgb(26, 26, 27), #676e75); */
+  /* border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; */
 
 }
 
@@ -372,12 +372,12 @@ ul li button{
   display: grid;
   justify-content: center;
   align-items: center;
-  height: 96px;
-  width: 100vh;
+  height: 70px;
+  width: 500px;
   border: solid black 1px;
-  background:linear-gradient(#45A29E, #1F2833);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  background-color: gray;
+  /* border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; */
 } */
 
 .subfeatures {
