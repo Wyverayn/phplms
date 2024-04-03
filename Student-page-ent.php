@@ -139,15 +139,22 @@
 
 
     <div class="subfeatures">
-
-      <div id="comments-container">
+      <div class="discussion-container" id="discussion-container">
         <h2>Discussion</h2>
-        <div id="discussions"></div>
-        <textarea id="discussion-text" placeholder="Start a discussion..."></textarea>
-        <button onclick="postDiscussion()">Post</button>
-      </div>
-      <script src="libri_comments.js"></script>
+        <div class="disc-txtarea">
+          <textarea id="discussion-text" placeholder="Start a discussion..." rows="8" cols="82"></textarea>
+        </div>
 
+        <div class="btn-post-container">
+          <button class="btn-post" onclick="postDiscussion()">Post</button>
+        </div>
+
+        <ul id="discussion" style="overflow-y: scroll; overflow-x: hidden; max-height: 300px;">
+          <li class="discussion-content" id="discussions"></li>
+        </ul>
+      </div>
+
+      <script src="libri_comments.js"></script>
     </div>
 
 

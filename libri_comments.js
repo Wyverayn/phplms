@@ -14,7 +14,7 @@ function renderDiscussions() {
 
     const discussions = getDiscussions();
     discussions.forEach((discussionText, index) => {
-        const discussionDiv = document.createElement('div');
+        const discussionDiv = document.createElement('li');
         discussionDiv.classList.add('discussion');
         discussionDiv.textContent = discussionText;
 
