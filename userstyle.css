@@ -265,3 +265,56 @@ text-align: start;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
+.subfeatures {
+  display: flex;
+  margin-right: 144px;
+  margin-left: 144px;
+  color: aliceblue;
+  background-color: #04263d;
+  padding: 16px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 96vh;
+  border: solid gray 1px;
+}
+
+.discussion-container {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  height: 48vh;
+  width:96vh;
+  border: solid gray 1px;
+}
+
+.disc-txtarea {
+  width: 32vh;
+}
+
+.discussions {
+  display: flex;
+  border: solid black 4px;
+}
+
+.discussion {
+  display: flex;
+  border: solid grey 1px;
+  height: 32vh;
+  margin: 4px;
+}
+
+.discussion-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 144vh;
+  width: 256px;
+}
+
+.delete-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: aliceblue;
+
+}
