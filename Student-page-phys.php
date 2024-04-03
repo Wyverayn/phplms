@@ -1,63 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>USER</title>
-  <link rel="stylesheet" href="userstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER</title>
+    <link rel="stylesheet" href="userstyle.css">
+
 </head>
-<div class="header">
-  <h2 class="btn">USER</h2>
-
-  <div class="logoutbtn">
-   <script>
-      function confirmLogout() {
-        if (confirm("Tapos nani sir? Ilog out nani?")) {
-          window.location = "index.php";
-        }
-      }
-    </script>
-
-    <button onclick="confirmLogout()" class="btn">LOG OUT</button>
-    </div>
-</div>
 <body>
-  <div class="upperbody">
-    <h1 class ="anim">LIBRI</h1>
-    <h2>WELCOME</h2>
-  </div>
-  <div class="body">
 
-    <!-- upperpart sang body ang may information -->
-    <div class="info">
-      <div>
-        <h4 class="text-center">
-          <h2>Information</h2>
-        </h4>
-      </div>
-
-      <div class="about">
-        <h5>Name:</h5>
-        <h5>Level:</h5>
-        <h5>Info:</h5>
-      </div>
-      <div class="gallery">
-        <div class="imageItem1"></div>
-      </div>
+    <div class="header">
+        
     </div>
 
-    <div class="main-content"> 
-      <h3>Main Content</h3> 
+    <div class="wholebody">
 
-     
-      
-      <form method="post">
-        <input type="text" name="search-string" placeholder="Search..." class="searchbar">
-        <button type="submit">Submit</button>
-      </form>
-      <h3>BOOKS</h3>
-      <div class="des-test">
+
+        <div class="side-nav">
+            <div class="user">
+                <img src="images/Untitled1.png" class="user-img">
+                <div>
+                    <h2>Random</h2>
+                    <p>USER</p>
+                </div>
+                <img src="images/star.png" class="star-img">
+            </div>
+            <ul>
+                <li><img src="images/dashboard.png"><a href="#">More</li>
+                <li><img src="images/reports.png"><a href="#">Profile</a></li>
+                <li><img src="images/messages.png"><a href="#">Feedback</a></li>
+                <li><img src="images/projects.png"><a href="#">About</a></li>
+                <li><img src="images/members.png"><button onclick = "hideShow()">Discussions</button></a></li>
+                <li><img src="images/setting.png"><a href="#">Settings</a></li>
+            </ul>
+
+            <ul>
+                <li><img src="images/logout.png">
+                
+                    <div class="logoutbtn">
+                        <script>
+                           function confirmLogout() {
+                             if (confirm("Tapos nani sir? Ilog out nani?")) {
+                               window.location = "index.php";
+                             }
+                           }
+                         </script>
+                     
+                         <button onclick="confirmLogout()" class="btn">Log Out</button>
+                         </div>
+                
+                </li>
+            </ul>
+
+            <div id = "main" class="main">
+                <script src ="hiddencategories.js"></script>
+                <div class="subfeatures">
+
+                    <div id="comments-container">
+                    <h2>Discussion</h2>
+                    <div id="discussions"></div>
+                    <textarea id="discussion-text" placeholder="Start a discussion..."></textarea>
+                    <button onclick="postDiscussion()">Post</button>
+                    </div>
+                    <script src="libri_comments.js"></script>
+                
+                    </div>
+                
+            
+            </div> 
+
+            
+        </div>
+
+        <div class="upper">
+            <div class="words">
+            <h6>LIBRI</h6>
+            <h4>explore, learn, succeed.</h4>
+            <input type="text" placeholder="Enter book title" class="searchbar" size="70px">
+
+        </div>
+         </div>
+
+
+   <div class="lower">
+      <div class="books">
+            <div class="des-test">
             <table class="tab-des-test">
               <tbody>
                 <tr class="tr-test">
@@ -120,125 +147,92 @@
             </table>
             
           </div>
-      <div class="des-test">
 
-      <?php
-      include "libri_dbcon.php";
+          <div class="des-test">
 
-      $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'phys'";
-      $display = $conn->query($pdf);
-      $search_string = NULL;
+<?php
+include "libri_dbcon.php";
 
-      if ($display->num_rows > 0) {
-        if(isset($_POST['search-string']) && !empty(trim($_POST['search-string']))) {
-          $search_string = $_POST['search-string'];
-          $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'phys' AND `pdf-code` LIKE '$search_string%'";
-          $display = $conn->query($pdf);
-          echo "<h2>Uploaded Files:</h2>";
-          echo "<ul>";
-          while ($row = $display->fetch_assoc()) {
-            $filename = $row["pdf-name"];
-            echo "<li>
-              <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
-            </li>";
-          }
-          echo "</ul>";
-          } else {
-            echo "<h2>Uploaded Files:</h2>";
-            echo "<ul>";
-            while ($row = $display->fetch_assoc()) {
-              $filename = $row["pdf-name"];
-              echo "<li>
-                <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
-              </li>";
-            }
-            echo "</ul>";
-          }
-        } else {
-          echo "No files uploaded";
-        }
-      ?>   
+$pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'phys'";
+$display = $conn->query($pdf);
+$search_string = NULL;
 
-      </div>
-    </div>
+if ($display->num_rows > 0) {
+  if(isset($_POST['search-string']) && !empty(trim($_POST['search-string']))) {
+    $search_string = $_POST['search-string'];
+    $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'phys' AND `pdf-code` LIKE '$search_string%'";
+    $display = $conn->query($pdf);
+    echo "<h2>Uploaded Files:</h2>";
+    echo "<ul>";
+    while ($row = $display->fetch_assoc()) {
+      $filename = $row["pdf-name"];
+      echo "<li>
+        <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+      </li>";
+    }
+    echo "</ul>";
+    } else {
+      echo "<h2>Uploaded Files:</h2>";
+      echo "<ul>";
+      while ($row = $display->fetch_assoc()) {
+        $filename = $row["pdf-name"];
+        echo "<li>
+          <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
+        </li>";
+      }
+      echo "</ul>";
+    }
+  } else {
+    echo "No files uploaded";
+  }
+?>   
 
+</div>
 
+            </div>
     
+            <div class="category">
+                SHELVES
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-math.php"><h4 class="btn">Mathematics</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-phys.php"><h4 class="btn">Physics</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-elex.php"><h4 class = "btn">Electrical/Electronics</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-comp.php"><h4 class = "btn" >Computer Studies</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-chem.php"><h4 class = "btn" >Chemistry</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-gec.php"><h4 class = "btn" >General Education</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-ent.php"><h4 class = "btn" >Entertainment/Literature</h4></a>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <a href="Student-page-misc.php"><h4 class = "btn" >Miscellaneous</h4></a>
+                </div>
+            </div>
 
-    <!-- sidebar part (shelves) -->
-
-    <div class="sidebar"><h3>Sidebar</h3>
-      <div class="space"></div>
-        <div>
-          <a href="Student-page-math.php"><h4 class="btn">Mathematics</h4></a>
+            </div>
         </div>
-        <div class="space"></div>
-        <div>
-          <a href="Student-page-phys.php"><h4 class="btn">Physics</h4></a>
-        </div>
-        <div class="space"></div>
-        <div>
-          <a href="Student-page-elex.php"><h4 class = "btn">Electrical/Electronics</h4></a>
-        </div>
-        <div class="space"></div>
-        <div>
-          <a href="Student-page-comp.php"><h4 class = "btn" >Computer Studies</h4></a>
-        </div>
-        <div class="space"></div>
-        <div>
-          <a href="Student-page-chem.php"><h4 class = "btn" >Chemistry</h4></a>
-        </div>
-        <div class="space"></div>
-        <div>
-          <a href="Student-page-gec.php"><h4 class = "btn" >General Education</h4></a>
-        </div>
-        <div class="space"></div>
-        <div>
-          <a href="Student-page-ent.php"><h4 class = "btn" >Entertainment/Literature</h4></a>
-        </div>
-        <div class="space"></div>
-        <div>
-          <a href="Student-page-misc.php"><h4 class = "btn" >Miscellaneous</h4></a>
-        </div>
-      </div>
-    </div>
+    </div> 
 
 
 
-    <div class="subfeatures">
-      <div class="discussion-container" id="discussion-container">
-        <h2>Discussion</h2>
-        <div class="disc-txtarea">
-          <textarea id="discussion-text" placeholder="Start a discussion..." rows="8" cols="82"></textarea>
-        </div>
-
-        <div class="btn-post-container">
-          <button class="btn-post" onclick="postDiscussion()">Post</button>
-        </div>
-
-        <ul id="discussion" style="overflow-y: scroll; overflow-x: hidden; max-height: 300px;">
-          <li class="discussion-content" id="discussions"></li>
-        </ul>
-      </div>
-
-      <script src="libri_comments.js"></script>
-    </div>
 
 </body>
-
-
-
-<footer>
-    <div class="footerdes">
-        <div>
-            <thead>
-                <tr>
-                    <th><h6>contact</h6></th>
-                    <th><h6>feedback</h6></th>
-                    <th><h6>more</h6></th>
-                </tr>
-            </thead>
-        </div>
-        </div>
-</footer>
 </html>
