@@ -157,6 +157,10 @@
   margin-top: -90px;
   text-align: center;
   padding-top: 10px;
+  overflow-y: hidden;
+}
+
+.books:hover{
   overflow-y: scroll;
 }
 
@@ -173,9 +177,12 @@
   margin-top: -90px;
   text-align: center;
   padding-top: 10px;
-  overflow-y: auto;
-  overflow-y: scroll;
+  overflow: hidden;
 }  
+
+.category:hover{
+  overflow-y: scroll;
+}
 
 .category h4{
   font-size: 16px;
