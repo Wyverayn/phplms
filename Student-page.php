@@ -52,6 +52,8 @@
                 </li>
             </ul>
 
+            
+            <!--
             <div id = "main" class="main">
                 <script src ="hiddencategories.js"></script>
                 <div class="subfeatures">
@@ -68,7 +70,7 @@
                 
             
             </div> 
-
+                        -->
             
         </div>
 
@@ -153,20 +155,6 @@
 
       <script src="libri_comments.js"></script>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
