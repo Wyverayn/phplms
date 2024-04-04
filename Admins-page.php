@@ -1,3 +1,6 @@
+<?php 
+  include "libri_dbcon.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,7 +100,7 @@
                   <option value="phys">Physics</option>
                   <option value="elex">Electrical/Electronics</option>
                   <option value="comp">Computer Studies</option>
-                  <option value="comp">Chemistry</option>
+                  <option value="chem">Chemistry</option>
                   <option value="gec">General Education</option>
                   <option value="ent">Entertainment/Literatures</option>
                   <option value="misc">Miscellaneous</option>
@@ -107,160 +110,30 @@
           </div>
               </form>
           </div>
-          
+              <table width = "100%" border = "1" align = "center">
+                <thead>
+                    <th>File Name</th>
+                    <th>Subject</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                  <?php
+                  $sql = "SELECT * FROM `pdf-files` ORDER BY `pdf-sub` ";
+                  $result = $conn->query($sql);
 
-
-              <?php
-              include "libri_dbcon.php";
-
-              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'math'";
-              $display = $conn->query($pdf);
-              echo "<h5>Mathematicss:</h5>";
-              if ($display->num_rows > 0) {
-                echo "<ul>";
-                while ($row = $display->fetch_assoc()) {
-                  $filename = $row["pdf-name"];
-                  echo "<li>
-                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
-                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
-                  </li>";
-                }
-                echo "</ul>";
-              } else {
-               echo "No files uploaded yet.";
-              }
-
-
-              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'phys'";
-              $display = $conn->query($pdf);
-              echo "<h5>Physics:</h5>";
-              if ($display->num_rows > 0) {
-                echo "<ul>";
-                while ($row = $display->fetch_assoc()) {
-                  $filename = $row["pdf-name"];
-                  echo "<li>
-                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
-                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
-                  </li>";
-                }
-                echo "</ul>";
-              } else {
-               echo "No files uploaded yet.";
-              }
-
-
-              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'elex'";
-              $display = $conn->query($pdf);
-              echo "<h5>Electrical/Electronics:</h5>";
-              if ($display->num_rows > 0) {
-                echo "<ul>";
-                while ($row = $display->fetch_assoc()) {
-                  $filename = $row["pdf-name"];
-                  echo "<li>
-                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
-                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
-                  </li>";
-                }
-                echo "</ul>";
-              } else {
-               echo "No files uploaded yet.";
-              }
-
-
-              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'comp'";
-              $display = $conn->query($pdf);
-              echo "<h5>Computer Studies:</h5>";
-              if ($display->num_rows > 0) {
-                echo "<ul>";
-                while ($row = $display->fetch_assoc()) {
-                  $filename = $row["pdf-name"];
-                  echo "<li>
-                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
-                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
-                  </li>";
-                }
-                echo "</ul>";
-              } else {
-               echo "No files uploaded yet.";
-              }
-
-
-              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'chem'";
-              $display = $conn->query($pdf);
-              echo "<h5>Chemistry:</h5>";
-              if ($display->num_rows > 0) {
-                echo "<ul>";
-                while ($row = $display->fetch_assoc()) {
-                  $filename = $row["pdf-name"];
-                  echo "<li>
-                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
-                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
-                  </li>";
-                }
-                echo "</ul>";
-              } else {
-               echo "No files uploaded yet.";
-              }
-
-
-              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'gec'";
-              $display = $conn->query($pdf);
-              echo "<h5>General Education:</h5>";
-              if ($display->num_rows > 0) {
-                echo "<ul>";
-                while ($row = $display->fetch_assoc()) {
-                  $filename = $row["pdf-name"];
-                  echo "<li>
-                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
-                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
-                  </li>";
-                }
-                echo "</ul>";
-              } else {
-               echo "No files uploaded yet.";
-              }
-
-
-              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'ent'";
-              $display = $conn->query($pdf);
-              echo "<h5>Entertainment/Literatures:</h5>";
-              if ($display->num_rows > 0) {
-                echo "<ul>";
-                while ($row = $display->fetch_assoc()) {
-                  $filename = $row["pdf-name"];
-                  echo "<li>
-                  <a href='download.php?file=" . urlencode($filename) . "'>$filename</a>
-                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
-                  </li>";
-                }
-                echo "</ul>";
-              } else {
-               echo "No files uploaded yet.";
-              }
-
-
-              $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'misc'";
-              $display = $conn->query($pdf);
-              echo "<h5>Miscellaneous:</h5>";
-              if ($display->num_rows > 0) {
-                echo "<ul>";
-                while ($row = $display->fetch_assoc()) {
-                  $filename = $row["pdf-name"];
-                  echo "<li>
-                  <a href='download.php?file=" . urlencode($filename)."'>$filename</a>
-                  <a href='delete-file.php?file=". urlencode($filename)."'>Delete</a>
-                  </li>";
-                }
-                echo "</ul>";
-              } else {
-               echo "No files uploaded yet.";
-              }
-
-            ?>
-
-
-
-
+                  if($result->num_rows > 0){
+                  while($row=$result->fetch_assoc())
+                  {
+                  ?>
+                  <tr>
+                    <td><?php echo $row['pdf-name']  ?></td>
+                    <td><?php echo $row['pdf-sub'] ?></td>
+                    <td><?php echo $row['pdf-code'] ?></td>
+                    <?php } ?>
+                  </tr> 
+                  <?php } ?>
+                </tbody>
+              </table>
             </div>
     
             <!-- <div class="category">

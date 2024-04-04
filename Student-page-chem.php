@@ -1,3 +1,7 @@
+<?php
+include "libri_dbcon.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,62 +91,26 @@
             <div class="des-test">
             <table class="tab-des-test">
               <tbody>
+                <?php
+                $sql = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'chem' ORDER BY `pdf-name`";
+                $result = $conn->query($sql);
+
+                if($result->num_rows > 0){
+                while($row=$result->fetch_assoc())
+                {
+                 ?>
                 <tr class="tr-test">
                   <td class="td-test-image">
                     Image
                   </td>
                   <td class="td-test-desc">
-                    <a href="#">BOOK TITLE</a>
-                    Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Delete</button>
+                  <a href="uploads/<?php echo $row['pdf-name'] ?>" target="_blank"><?php echo $row['pdf-name'] ?></a>
                   <td>
                  </tr>
-
-                 <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    <a href="#">BOOK TITLE</a>
-                    Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Delete</button>
-                  <td>
-                 </tr>
-
-                 <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    <a href="#">BOOK TITLE</a>
-                    Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Delete</button>
-                  <td>
-                 </tr>
-                 <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    <a href="#">BOOK TITLE</a>
-                    Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Delete</button>
-                  <td>
-                 </tr>
-                 <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
-                  <td class="td-test-desc">
-                    <a href="#">BOOK TITLE</a>
-                    Descriptions, aaaaaupload, and download
-                    <button type="button" class="btn">Delete</button>
-                  <td>
-                 </tr>
-
-                
-
-                
+                  <?php 
+                  }
+                }
+                  ?>
               </tbody>
             </table>
             
@@ -151,7 +119,6 @@
           <div class="des-test">
 
 <?php
-include "libri_dbcon.php";
 
 $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'chem'";
 $display = $conn->query($pdf);
