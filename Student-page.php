@@ -30,7 +30,7 @@
                 <li><img src="images/reports.png"><a href="#">Profile</a></li>
                 <li><img src="images/messages.png"><a href="tempfeedback/feedbackmainpage.php">Feedback</a></li>
                 <li><img src="images/projects.png"><a href="#">About</a></li>
-                <li><img src="images/members.png"><button onclick = "hideShow()">Discussions</button></a></li>
+                <li><img src="images/members.png"><a href="Discussions-page.php">Discussions</a></li>
                 <li><img src="images/setting.png"><a href="#">Settings</a></li>
             </ul>
 
@@ -86,7 +86,7 @@
 
         <div class="lower">
             <div class="books">
-               
+                <h4>"Welcome to LIBRI. Click on the categories to get started." </h4>
             </div>
     
             <div class="category">
@@ -137,7 +137,7 @@
 
 
 
-    <div class="subfeatures">
+    <!-- <div class="subfeatures">
       <div class="discussion-container" id="discussion-container">
         <h2>Discussion</h2>
         <div class="disc-txtarea">
@@ -154,7 +154,7 @@
       </div>
 
       <script src="libri_comments.js"></script>
-    </div>
+    </div> -->
 
 </body>
 </html>
