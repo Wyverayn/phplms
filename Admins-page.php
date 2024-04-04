@@ -18,10 +18,10 @@
 
         <div class="side-nav">
             <div class="user">
-                <img src="images/Untitled1.png" class="user-img">
+                <img src="images/Untitled2.png" class="user-img">
                 <div>
                     <h2>Random</h2>
-                    <p>USER</p>
+                    <p>ADMIN</p>
                 </div>
                 <img src="images/star.png" class="star-img">
             </div>
