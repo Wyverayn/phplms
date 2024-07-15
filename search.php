@@ -1,10 +1,22 @@
 <?php 
     include "libri_dbcon.php";
+<<<<<<< Updated upstream
     
     if(isset($_POST['submit']))
     {
         $search_string = $_POST['search-string'];
         $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-sub` = 'chem' AND `pdf-code` LIKE '$search_string%'";
+=======
+    session_start();
+
+    $result = null;
+
+    if(isset($_POST['search']))
+    {
+        $search_string = $_POST['searchKey'];
+        $search_string = $conn->real_escape_string($search_string);
+        $pdf = "SELECT * FROM `pdf-files` WHERE `pdf-name` LIKE '%$search_string%'";
+>>>>>>> Stashed changes
         $result = $conn->query($pdf);
     }
 
@@ -87,9 +99,15 @@
             <div class="words">
             <h6>LIBRI</h6>
             <h4>explore, learn, succeed.</h4>
+<<<<<<< Updated upstream
             <form method="post">
         <input action="search.php"type="text" name="search-string" placeholder="Search..." class="searchbar">
         <button type="submit">Submit</button>
+=======
+            <form action="search.php" method="post">
+        <input type="search" name="searchKey">
+        <input type="submit" name="search" value="Search">
+>>>>>>> Stashed changes
       </form>
 
         </div>
@@ -100,6 +118,7 @@
       <div class="books">
             <div class="des-test">
             <table class="tab-des-test">
+<<<<<<< Updated upstream
               <tbody>
                 <?php
                 if($result->num_rows > 0){
@@ -115,6 +134,18 @@
                 }
                   ?>
               </tbody>
+=======
+            <tbody>
+                <?php
+                if ($result !== null && $result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr><td><a href='uploads/{$row['pdf-name']}' target='_blank'>{$row['pdf-name']}</a></td></tr>";
+                    }
+                } else {
+                    echo "<tr><td>No results found</td></tr>";
+                }
+                ?>
+>>>>>>> Stashed changes
             </table>
             
           </div>

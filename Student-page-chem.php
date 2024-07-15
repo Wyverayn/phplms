@@ -79,9 +79,15 @@ session_start();
             <div class="words">
             <h6>LIBRI</h6>
             <h4>explore, learn, succeed.</h4>
+<<<<<<< Updated upstream
             <form method="post">
         <input  type="text" name="search-string" placeholder="Search..." class="searchbar">
         <button type="submit">Submit</button>
+=======
+            <form action="search.php" method="post">
+        <input type="search" name="searchKey" placeholder="Search..." class="searchbar">
+        <input type="submit" name="search" value="Search">
+>>>>>>> Stashed changes
       </form>
 
         </div>
