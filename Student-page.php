@@ -1,3 +1,7 @@
+<?php 
+  include "libri_dbcon.php"; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,6 +132,25 @@
             </div>
         </div>
     </div> 
+
+
+    <div class="notifications">
+            <h4>Notifications</h4>
+            <ul>
+                <?php
+                $sql = "SELECT * FROM notifications ORDER BY created_at DESC";
+                $result = $conn->query($sql);
+                if($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        echo "<li>" . htmlspecialchars($row['message']) . " <span class='timestamp'>" . $row['created_at'] . "</span></li>";
+                    }
+                } else {
+                    echo "<li>No notifications</li>";
+                }
+                ?>
+            </ul>
+        </div>
+    </div>  
 
 
 
