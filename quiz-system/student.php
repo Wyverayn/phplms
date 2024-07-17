@@ -7,14 +7,23 @@ if ($_SESSION['role'] != 'student') {
     exit();
 }
 
-$quizzes = $conn->query("SELECT * FROM quizzes WHERE deadline >= CURDATE()");
+$quizzes = $conn->query("SELECT * FROM quizzes WHERE deadline >= NOW()");
+
+if (isset($_POST['start_quiz'])) {
+    $quiz_id = $_POST['quiz_id'];
+
+    // Query questions based on quiz_id
+    $questions = $conn->query("SELECT * FROM questions WHERE quiz_id = $quiz_id");
+}
 
 if (isset($_POST['take_quiz'])) {
     $quiz_id = $_POST['quiz_id'];
     $student_id = $_SESSION['user_id'];
     $score = 0;
+    $total_items = 0;
 
     foreach ($_POST['answers'] as $question_id => $answer) {
+        $total_items++; // Increment total items for each question
         $stmt = $conn->prepare("SELECT correct_answer FROM questions WHERE id = ?");
         $stmt->bind_param("i", $question_id);
         $stmt->execute();
@@ -27,59 +36,21 @@ if (isset($_POST['take_quiz'])) {
         }
     }
 
-    $stmt = $conn->prepare("INSERT INTO results (student_id, quiz_id, score) VALUES (?, ?, ?)");
-    $stmt->bind_param("iii", $student_id, $quiz_id, $score);
+    $stmt = $conn->prepare("INSERT INTO results (student_id, quiz_id, score, total_items, submission_time) VALUES (?, ?, ?, ?, NOW())");
+    $stmt->bind_param("iiii", $student_id, $quiz_id, $score, $total_items);
     $stmt->execute();
     $stmt->close();
 
-    echo "Quiz completed! Your score: " . $score;
+    echo "Quiz completed! Your score: " . $score . " out of " . $total_items;
 }
 
-if (isset($_POST['start_quiz'])) {
-    $quiz_id = $_POST['quiz_id'];
-    $quiz = $conn->query("SELECT * FROM quizzes WHERE id = " . $quiz_id)->fetch_assoc();
-    $questions = $conn->query("SELECT * FROM questions WHERE quiz_id = " . $quiz_id);
-    $timer = $quiz['timer'] * 60; // Convert minutes to seconds
-}
-
-$results = $conn->query("SELECT q.title, r.score FROM results r JOIN quizzes q ON r.quiz_id = q.id WHERE r.student_id = " . $_SESSION['user_id']);
+$results = $conn->query("SELECT q.title, r.score, r.total_items, r.submission_time FROM results r JOIN quizzes q ON r.quiz_id = q.id WHERE r.student_id = " . $_SESSION['user_id']);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Student Dashboard</title>
-    <script>
-        let timer;
-        let timeLeft;
-
-        function startTimer(duration) {
-            timeLeft = duration;
-            timer = setInterval(countDown, 1000);
-        }
-
-        function countDown() {
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-                document.getElementById('quizForm').submit();
-            } else {
-                timeLeft--;
-                displayTimeLeft(timeLeft);
-            }
-        }
-
-        function displayTimeLeft(timeLeft) {
-            const minutes = Math.floor(timeLeft / 60);
-            const seconds = timeLeft % 60;
-            document.getElementById('timer').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-        }
-
-        window.addEventListener('load', function() {
-            <?php if (isset($_POST['start_quiz'])): ?>
-                startTimer(<?= $timer ?>);
-            <?php endif; ?>
-        });
-    </script>
 </head>
 <body>
     <h2>Take Quiz</h2>
@@ -92,10 +63,9 @@ $results = $conn->query("SELECT q.title, r.score FROM results r JOIN quizzes q O
         <button type="submit" name="start_quiz">Start Quiz</button>
     </form>
 
-    <?php if (isset($_POST['start_quiz'])): ?>
-        <h3>Time left: <span id="timer"><?= $quiz['timer'] ?>:00</span></h3>
-        <form method="post" action="" id="quizForm">
-            <input type="hidden" name="quiz_id" value="<?= $quiz_id ?>">
+    <?php if (isset($_POST['start_quiz']) && isset($questions)): ?>
+        <form method="post" action="">
+            <input type="hidden" name="quiz_id" value="<?= $_POST['quiz_id'] ?>">
             <?php while ($row = $questions->fetch_assoc()): ?>
                 <p><?= $row['question_text'] ?></p>
                 <?php
@@ -114,11 +84,15 @@ $results = $conn->query("SELECT q.title, r.score FROM results r JOIN quizzes q O
         <tr>
             <th>Quiz</th>
             <th>Score</th>
+            <th>Total Items</th>
+            <th>Date/Time Submitted</th>
         </tr>
         <?php while ($row = $results->fetch_assoc()): ?>
             <tr>
                 <td><?= $row['title'] ?></td>
                 <td><?= $row['score'] ?></td>
+                <td><?= $row['total_items'] ?></td>
+                <td><?= $row['submission_time'] ?></td>
             </tr>
         <?php endwhile; ?>
     </table>

@@ -10,16 +10,17 @@ if ($_SESSION['role'] != 'teacher') {
 if (isset($_POST['create_quiz'])) {
     $title = $_POST['title'];
     $deadline = $_POST['deadline'];
-    $timer = $_POST['timer'];
     $teacher_id = $_SESSION['user_id'];
 
-    $stmt = $conn->prepare("INSERT INTO quizzes (teacher_id, title, deadline, timer) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("issi", $teacher_id, $title, $deadline, $timer);
+    $stmt = $conn->prepare("INSERT INTO quizzes (teacher_id, title, deadline) VALUES (?, ?, ?)");
+    $stmt->bind_param("iss", $teacher_id, $title, $deadline);
 
     if ($stmt->execute()) {
         $quiz_id = $stmt->insert_id;
+        $total_items = 0; // Initialize total items
 
         foreach ($_POST['questions'] as $index => $question) {
+            $total_items++; // Increment total items for each question
             $question_text = $question['text'];
             $correct_answer = $question['correct_answer'];
 
@@ -72,25 +73,8 @@ if (isset($_POST['delete_quiz'])) {
     echo "Quiz deleted successfully!";
 }
 
-if (isset($_POST['delete_question'])) {
-    $question_id = $_POST['question_id'];
-
-    // Delete question and options associated with the question
-    $stmt = $conn->prepare("DELETE FROM options WHERE question_id = ?");
-    $stmt->bind_param("i", $question_id);
-    $stmt->execute();
-    $stmt->close();
-
-    $stmt = $conn->prepare("DELETE FROM questions WHERE id = ?");
-    $stmt->bind_param("i", $question_id);
-    $stmt->execute();
-    $stmt->close();
-
-    echo "Question deleted successfully!";
-}
-
+$results = $conn->query("SELECT r.id, u.fullname, q.title, r.score, r.total_items, r.submission_time FROM results r JOIN users u ON r.student_id = u.id JOIN quizzes q ON r.quiz_id = q.id WHERE q.teacher_id = " . $_SESSION['user_id']);
 $quizzes = $conn->query("SELECT * FROM quizzes WHERE teacher_id = " . $_SESSION['user_id']);
-$results = $conn->query("SELECT r.id, u.fullname, q.title, r.score FROM results r JOIN users u ON r.student_id = u.id JOIN quizzes q ON r.quiz_id = q.id WHERE q.teacher_id = " . $_SESSION['user_id']);
 ?>
 
 <!DOCTYPE html>
@@ -102,8 +86,7 @@ $results = $conn->query("SELECT r.id, u.fullname, q.title, r.score FROM results 
     <h2>Create Quiz</h2>
     <form method="post" action="">
         <input type="text" name="title" placeholder="Quiz Title" required><br>
-        <input type="date" name="deadline" required><br>
-        <input type="number" name="timer" placeholder="Timer (minutes)" required><br>
+        <input type="datetime-local" name="deadline" required><br>
         
         <h3>Questions</h3>
         <div id="questions">
@@ -169,12 +152,16 @@ $results = $conn->query("SELECT r.id, u.fullname, q.title, r.score FROM results 
             <th>Student</th>
             <th>Quiz</th>
             <th>Score</th>
+            <th>Total Items</th>
+            <th>Date/Time Submitted</th>
         </tr>
         <?php while ($row = $results->fetch_assoc()): ?>
             <tr>
                 <td><?= $row['fullname'] ?></td>
                 <td><?= $row['title'] ?></td>
                 <td><?= $row['score'] ?></td>
+                <td><?= $row['total_items'] ?></td>
+                <td><?= $row['submission_time'] ?></td>
             </tr>
         <?php endwhile; ?>
     </table>
