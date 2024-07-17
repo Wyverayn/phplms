@@ -1,5 +1,5 @@
 <?php 
-session_start();
+include "libri_dbcon
 ?>
 
 <!DOCTYPE html>
@@ -83,9 +83,6 @@ session_start();
             <h6>LIBRI</h6>
             <h4>explore, learn, succeed.</h4>
             <input type="text" placeholder="Enter book title" class="searchbar" size="70px">
-        <form action="search.php" method="post">
-        <input type="search" name="searchKey" placeholder="Search..." class="searchbar">
-        <input type="submit" name="search" value="Search">
 
         </div>
          </div>
