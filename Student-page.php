@@ -1,5 +1,5 @@
 <?php 
-include "libri_dbcon
+include "libri_dbcon";
 ?>
 
 <!DOCTYPE html>
