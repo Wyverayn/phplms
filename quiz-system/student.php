@@ -53,11 +53,11 @@ $results = $conn->query("SELECT q.title, r.score, r.total_items, r.submission_ti
     <title>Student Dashboard</title>
 </head>
 <body>
-    <h2>Take Quiz</h2>
+<h2>Take Quiz</h2>
     <form method="post" action="">
         <select name="quiz_id">
             <?php while ($row = $quizzes->fetch_assoc()): ?>
-                <option value="<?= $row['id'] ?>"><?= $row['title'] ?></option>
+                <option value="<?= $row['id'] ?>"><?= $row['title'] ?> (Deadline: <?= $row['deadline'] ?>)</option>
             <?php endwhile; ?>
         </select><br>
         <button type="submit" name="start_quiz">Start Quiz</button>
