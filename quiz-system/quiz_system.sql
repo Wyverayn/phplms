@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2024 at 05:25 PM
+-- Generation Time: Jul 17, 2024 at 05:59 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `quiz_system`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attempts`
+--
+
+CREATE TABLE `attempts` (
+  `id` int(11) NOT NULL,
+  `student_id` int(11) DEFAULT NULL,
+  `quiz_id` int(11) DEFAULT NULL,
+  `attempts_left` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -57,7 +70,8 @@ CREATE TABLE `quizzes` (
   `id` int(11) NOT NULL,
   `teacher_id` int(11) DEFAULT NULL,
   `title` varchar(255) NOT NULL,
-  `deadline` datetime NOT NULL
+  `deadline` datetime NOT NULL,
+  `attempts` int(11) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -103,6 +117,14 @@ INSERT INTO `users` (`id`, `fullname`, `username`, `password`, `role`) VALUES
 --
 
 --
+-- Indexes for table `attempts`
+--
+ALTER TABLE `attempts`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `student_id` (`student_id`),
+  ADD KEY `quiz_id` (`quiz_id`);
+
+--
 -- Indexes for table `options`
 --
 ALTER TABLE `options`
@@ -143,28 +165,34 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `attempts`
+--
+ALTER TABLE `attempts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `options`
 --
 ALTER TABLE `options`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `quizzes`
 --
 ALTER TABLE `quizzes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `results`
 --
 ALTER TABLE `results`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -175,6 +203,13 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `attempts`
+--
+ALTER TABLE `attempts`
+  ADD CONSTRAINT `attempts_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `attempts_ibfk_2` FOREIGN KEY (`quiz_id`) REFERENCES `quizzes` (`id`);
 
 --
 -- Constraints for table `options`
