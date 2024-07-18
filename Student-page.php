@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include "libri_dbcon";
 ?>
 
 <!DOCTYPE html>
@@ -81,15 +81,11 @@ session_start();
             <div class="words">
             <h6>LIBRI</h6>
             <h4>explore, learn, succeed.</h4>
-<<<<<<< Updated upstream
-      <form method="post">
-        <input type="text" name="search-string" placeholder="Search..." class="searchbar">
-        <button type="submit">Submit</button>
-=======
+
       <form action="search.php" method="post">
         <input type="search" name="searchKey" placeholder="Search..." class="searchbar">
         <input type="submit" name="search" value="Search">
->>>>>>> Stashed changes
+
       </form>
         </div>
          </div>
@@ -139,6 +135,25 @@ session_start();
             </div>
         </div>
     </div> 
+
+
+    <div class="notifications">
+            <h4>Notifications</h4>
+            <ul>
+                <?php
+                $sql = "SELECT * FROM notifications ORDER BY created_at DESC";
+                $result = $conn->query($sql);
+                if($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        echo "<li>" . htmlspecialchars($row['message']) . " <span class='timestamp'>" . $row['created_at'] . "</span></li>";
+                    }
+                } else {
+                    echo "<li>No notifications</li>";
+                }
+                ?>
+            </ul>
+        </div>
+    </div>  
 
 
 
