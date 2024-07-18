@@ -1,5 +1,6 @@
 <?php 
   include "libri_dbcon.php";
+  session_start();
 ?>
 
 <!DOCTYPE html>
@@ -21,21 +22,20 @@
 
 
         <div class="side-nav">
-            <div class="user">
-                <img src="images/Untitled1.png" class="user-img">
                 <div>
-                    <h2>Random</h2>
-                    <p>USER</p>
+                <img src="images/Untitled2.png" class="user-img">
+                    <div>
+                    
+                    <h2>USER</h2>
+                    <p> <?php echo $_SESSION['uname']; ?> </p>
                 </div>
                 <img src="images/star.png" class="star-img">
             </div>
             <ul>
-                <li><img src="images/dashboard.png"><a href="Student-page.php">Home</li>
-                <li><img src="images/reports.png"><a href="#">Profile</a></li>
-                <li><img src="images/messages.png"><a href="#">Feedback</a></li>
+                <li><img src="images/dashboard.png"><a href="Student-page.php">Home</a></li>
+                <li><img src="images/messages.png"><a href="tempfeedback/feedbackmainpage.php">Feedback</a></li>
                 <li><img src="images/projects.png"><a href="#">About</a></li>
-                <li><img src="images/members.png"><button onclick = "hideShow()">Discussions</button></a></li>
-                <li><img src="images/setting.png"><a href="#">Settings</a></li>
+                <li><img src="images/members.png"><a href="Discussions-page.php">Discussions</a></li>
             </ul>
 
             <ul>
@@ -80,7 +80,9 @@
             <div class="words">
             <h6>LIBRI</h6>
             <h4>explore, learn, succeed.</h4>
-            <input type="text" placeholder="Enter book title" class="searchbar" size="70px">
+            <form action="search.php" method="post">
+        <input type="search" name="searchKey" placeholder="Search..." class="searchbar">
+        <input type="submit" name="search" value="Search">
 
         </div>
          </div>
@@ -100,9 +102,6 @@
                 {
                  ?>
                 <tr class="tr-test">
-                  <td class="td-test-image">
-                    Image
-                  </td>
                   <td class="td-test-desc">
                   <a href="uploads/<?php echo $row['pdf-name'] ?>" target="_blank"><?php echo $row['pdf-name'] ?></a>
                   <td>
