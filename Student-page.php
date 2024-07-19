@@ -1,6 +1,12 @@
+<?php 
+  include "libri_dbcon.php"; 
+?>
 <?php
-session_start();
-include "libri_dbcon";
+require 'config.php';
+
+$_SESSION["id"] = 1;
+$sessionId = $_SESSION["id"];
+$user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM tb_user WHERE id = $sessionId"));
 ?>
 
 <!DOCTYPE html>
@@ -23,18 +29,21 @@ include "libri_dbcon";
 
         <div class="side-nav">
             <div class="user">
-                <img src="images/Untitled2.png" class="user-img">
+                    <div class="upload">
+               <img src="img/<?php echo $user['image']; ?>" id="image" class="user-img">
+               </div>
                 <div>
-                    <h2>USER</h2>
-                    <p> <?php echo $_SESSION['uname']; ?> </p>
+                    <p>USER</p>
                 </div>
                 <img src="images/star.png" class="star-img">
             </div>
             <ul>
-                    <li><img src="images/dashboard.png"><a href="Student-page.php">Home</a></li>
-                    <li><img src="images/messages.png"><a href="tempfeedback/feedbackmainpage.php">Feedback</a></li>
-                    <li><img src="images/projects.png"><a href="#">About</a></li>
-                    <li><img src="images/members.png"><a href="Discussions-page.php">Discussions</a></li>
+                <li><img src="images/dashboard.png"><a href="Student-page.php">Home</li>
+                <li><img src="images/reports.png"><a href="profindex.php">Profile</a></li>
+                <li><img src="images/messages.png"><a href="tempfeedback/feedbackmainpage.php">Feedback</a></li>
+                <li><img src="images/projects.png"><a href="#">About</a></li>
+                <li><img src="images/members.png"><a href="Discussions-page.php">Discussions</a></li>
+                <li><img src="images/setting.png"><a href="#">Settings</a></li>
             </ul>
 
             <ul>
@@ -81,12 +90,11 @@ include "libri_dbcon";
             <div class="words">
             <h6>LIBRI</h6>
             <h4>explore, learn, succeed.</h4>
+            <form action="search.php" method="post">
+                    <input type="search" name="searchKey">
+                    <input type="submit" name="search" value="Search">
+            </form>
 
-      <form action="search.php" method="post">
-        <input type="search" name="searchKey" placeholder="Search..." class="searchbar">
-        <input type="submit" name="search" value="Search">
-
-      </form>
         </div>
          </div>
 
